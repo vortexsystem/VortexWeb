@@ -1,0 +1,26 @@
+---
+engines:
+ rubocop:
+   enabled: true
+   exclude_paths:
+     - config/engines.yml
+ duplication: 
+   exclude_paths:
+     - config/engines.yml
+ metric:
+   exclude_paths:
+     - config/engines.yml
+ coverage:
+   exclude_paths:
+     - config/engines.yml
+languages:
+  css:
+    extensions:
+      - '-css.resource'
+exclude_paths:
+  - '.bundle/**'
+  - 'spec/**/*'
+  - 'benchmarks/**/*'
+  - '*.min.js'
+  - '**/tests/**' 
+  - 'system/*'
