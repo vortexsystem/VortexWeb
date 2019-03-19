@@ -20,6 +20,10 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		if(!$this->session->userdata('LOGGED_IN'))
+		{
+			redirect('user/login');
+		}
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Home',

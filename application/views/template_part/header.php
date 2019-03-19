@@ -136,10 +136,8 @@
 
 <?php
 
-$breadarrlength = count($page_title);
 
-for($x = 1; $x < $breadarrlength; $x++){
-    echo "<li class='breadcrumb-item'>" . $page_title[$x] . "</li>";
-}
+    echo "<li class='breadcrumb-item active'>" . $page_title . "</li>";
+
 ?>
                   </ol>

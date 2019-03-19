@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/myaccount-new/';
+$config['base_url'] = 'https://account.nwam.tk/';
 
 /*
 |--------------------------------------------------------------------------
@@ -401,7 +401,7 @@ $config['sess_regenerate_destroy'] = TRUE;
 |
 */
 $config['cookie_prefix']	= '';
-$config['cookie_domain']	= 'localhost';
+$config['cookie_domain']	= '.nwam.tk';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;

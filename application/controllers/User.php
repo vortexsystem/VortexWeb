@@ -16,7 +16,12 @@ class User extends CI_Controller
   }
  
   public function login(){
-	$this->load->view('user/login');	
+$data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Home',
+        'message' => 'My Message'
+);
+	$this->load->view('user/login', $data);	
   } 
   public function process(){
      $this->load->model('User_model', 'auth');
@@ -44,7 +49,7 @@ redirect('/');
   } 
   public function logout(){
     $this->session->sess_destroy();
-    redirect('login');
+    redirect('/user/login');
   }
 }
 ?>
