@@ -81,7 +81,7 @@ class Account extends CI_Controller {
 );
 
                 $this->load->view('template_part/header', $data);
-                $this->load->view('account/main', $data);
+                $this->load->view('account/partners', $data);
                 $this->load->view('template_part/footer', $data);
 
 

@@ -24,14 +24,7 @@ class Home extends CI_Controller {
 		{
 			redirect('user/login');
 		}
-		$data = array(
-        'base_href' => base_url(),
-        'page_title' => 'Home',
-        'message' => 'My Message'
-);
-		$this->load->view('template_part/header', $data);
-		$this->load->view('home/main', $data);
-		$this->load->view('template_part/footer', $data);
+		redirect('account/');		
 	}
 }
 
