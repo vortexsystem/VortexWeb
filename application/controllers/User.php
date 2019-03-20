@@ -19,7 +19,7 @@ class User extends CI_Controller
 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Home',
-        'message' => 'My Message'
+        'message' => ''
 );
 	$this->load->view('user/login', $data);	
   } 
@@ -32,7 +32,13 @@ $data = array(
 	$light = $this->auth->login($first , $last, $password);
 	if($light == "FALSE")
 	{
-	 redirect('/user/login');
+         $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Login',
+        'message' => 'Invalid Username or Password'
+);
+
+	$this->load->view('user/login', $data);
 	}
 	else
 	{

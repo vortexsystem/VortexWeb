@@ -99,7 +99,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="landDropdown">
           <h6 class="dropdown-header">My Regions</h6>
-          <a class="dropdown-item" href="regions.php">Manage Regions</a>
+          <a class="dropdown-item" href="land/regions">Manage Regions</a>
         </div>
 
       </li>
@@ -109,14 +109,12 @@
           <span>Account</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="accountDropdown">
-          <a class="dropdown-item" href="accountsummary.php">Account Summary</a>
-          <a class="dropdown-item" href="accounttransactions.php">Transactions</a>
-          <a class="dropdown-item" href="emailsettings.php">Email Settings</a>
-          <a class="dropdown-item" href="accountsummary.php">Account Summary</a>
-          <a class="dropdown-item" href="contactinformation.php">Contact Information</a>
-          <a class="dropdown-item" href="changepassword.php">Change Password</a>
-          <a class="dropdown-item" href="contactinformation.php">Contact Information</a>
-          <a class="dropdown-item" href="partners.php">Partners</a>
+          <a class="dropdown-item" href="account/">Account Summary</a>
+          <a class="dropdown-item" href="account/transactions">Transactions</a>
+          <a class="dropdown-item" href="account/email">Email Settings</a>
+          <a class="dropdown-item" href="account/contact">Contact Information</a>
+          <a class="dropdown-item" href="account/password">Change Password</a>
+          <a class="dropdown-item" href="account/partners">Partners</a>
         </div>
 
       </li>
