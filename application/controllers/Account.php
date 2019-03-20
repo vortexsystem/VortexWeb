@@ -39,7 +39,7 @@ class Account extends CI_Controller {
 );
 
                 $this->load->view('template_part/header', $data);
-                $this->load->view('account/main', $data);
+                $this->load->view('account/transactions', $data);
                 $this->load->view('template_part/footer', $data);
 
 
@@ -53,7 +53,7 @@ class Account extends CI_Controller {
 );
 
                 $this->load->view('template_part/header', $data);
-                $this->load->view('account/main', $data);
+                $this->load->view('account/emailsettings', $data);
                 $this->load->view('template_part/footer', $data);
 
 

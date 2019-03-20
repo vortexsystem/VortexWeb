@@ -26,8 +26,6 @@ class Sendgrid_Mail
 	public function __construct($params = array())
 	{
 		$this->ci =& get_instance();
-		// load sparks
-		$this->ci->load->spark('restclient/2.0.0');
 		// load config vars
 		$this->ci->load->config('sendgrid');
 		if ( ! isset($params['api_user']))   { $this->api_user   = config_item('api_user'); }
