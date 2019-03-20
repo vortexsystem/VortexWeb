@@ -23,4 +23,6 @@ exclude_paths:
   - 'benchmarks/**/*'
   - '*.min.js'
   - '**/tests/**' 
-  - 'system/*'
+  - 'system/**/*.php'
+  - 'system/*.php'
+  - 'system/**/**/*.php'
