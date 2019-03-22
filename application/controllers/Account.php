@@ -81,7 +81,21 @@ class Account extends CI_Controller {
 );
 
                 $this->load->view('template_part/header', $data);
-                $this->load->view('account/partners', $data);
+                $this->load->view('partners/proposal', $data);
+                $this->load->view('template_part/footer', $data);
+
+
+        }
+        public function password()
+        {
+                                $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Change Password',
+        'message' => 'My Message'
+);
+
+                $this->load->view('template_part/header', $data);
+                $this->load->view('password/password', $data);
                 $this->load->view('template_part/footer', $data);
 
 

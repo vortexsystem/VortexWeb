@@ -35,16 +35,10 @@ echo "<div class='alert alert-danger' role='alert'>". $message . "</div>";
 
 
 
-                   <div class="form-group">
-                     <div class="form-label-group">
-                        <input type="text" name="first" id="first" class="form-control" placeholder="First name">
-                        <label for="first">First Name</label>
-                     </div>
-                  </div>
                   <div class="form-group">
                      <div class="form-label-group">
-                        <input type="text" name="last" id="first" class="form-control" placeholder="Last name">
-                        <label for="last">Last Name</label>
+                        <input type="text" name="user" id="user" class="form-control" placeholder="Username">
+                        <label for="user">User Name</label>
                      </div>
                   </div>
                   <div class="form-group">

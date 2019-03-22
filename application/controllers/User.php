@@ -26,10 +26,12 @@ $data = array(
   public function process(){
      $this->load->model('User_model', 'auth');
 
-	$first = $this->input->post('first');
-	$last = $this->input->post('last');
+	$user = $this->input->post('user');
 	$password = $this->input->post('password');
-	$light = $this->auth->login($first , $last, $password);
+$words = explode(' ', $user);
+$word = array_pop($words);
+$first_chunk = implode(' ', $words);
+	$light = $this->auth->login($first_chunk , $word, $password);
 	if($light == "FALSE")
 	{
          $data = array(
