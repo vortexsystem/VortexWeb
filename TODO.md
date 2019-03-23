@@ -1,4 +1,5 @@
-# Todo in this Project
+
+# Public Viewing
 
 ## Account
 * Add Account Summary Page
@@ -23,3 +24,6 @@
 * Change Profile Text, Interests, etc
 ## Misc
 
+# Technical
+* Use Javascript to Md5() hash the password before the form is sent
+* 
