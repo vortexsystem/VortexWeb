@@ -35,33 +35,29 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="logout.php">Logout</a>
+          <a class="btn btn-primary" href="user/logout">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="resources/vendor/jquery/jquery.min.js"></script>
+<script
+  src="//code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script> 
+
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="resources/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="resources/vendor/chart.js/Chart.min.js"></script>
   <script src="resources/vendor/datatables/jquery.dataTables.js"></script>
   <script src="resources/vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="resources/js/sb-admin.min.js"></script>
-
-  <!-- Demo scripts for this page-->
-  <script src="resources/js/demo/datatables-demo.js"></script>
-  <script src="resources/js/demo/chart-area-demo.js"></script>
-
-<script src="resources/js/data.js"></script>
-
 </body>
 
 </html>
