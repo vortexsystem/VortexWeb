@@ -21,7 +21,7 @@
                 </thead>
                 <tbody>
    
-			  <?php foreach ($region_array as $regions);?>
+			  <?php foreach ($region_array as $regions){ ?>
 
          <?php
 		$x = $regions["locX"] / 256;
@@ -33,7 +33,7 @@
                     <td>Estate Name Here</td>
 	  <td><a href="land/region/<?php echo $regions["uuid"];?>">Click to Manage</a></td>
                   </tr>
-        <?php endforeach;?>
+        <?php } ?>
                 </tbody>
               </table>
             </div>
