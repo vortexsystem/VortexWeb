@@ -1,7 +1,7 @@
        <!-- Page Content -->
         <h1>Manage Regions</h1>
         <hr>
-        <p>This is a great starting point for new custom pages.</p>
+<p>You are the owner of 1 region(s) related to 1 estate(s).</p>
        <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
