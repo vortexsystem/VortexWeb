@@ -21,20 +21,22 @@
                 </thead>
                 <tbody>
    
-			  <?php foreach ($region_array as $regions):?>
+			  <?php foreach ($region_array as $regions);?>
 
-         
+         <?php
+		$x = $regions["locX"] / 256;
+		$y = $regions["locY"] / 256;
   <tr>
                     <td><?php echo $regions["regionName"];?></td>
-                    <td><?php echo $regions["locX"];?> , <?php echo $regions["locY"];?></td>
+                    <td><?php echo $x; ?> , <?php echo $y;?></td>
                     <td>General Region</td>
-                    <td>Estate Name HEre</td>
-	  <td><a href="<?php echo $regions["uuid"];?>">Click to Manage</a></td>
+                    <td>Estate Name Here</td>
+	  <td><a href="land/region/<?php echo $regions["uuid"];?>">Click to Manage</a></td>
                   </tr>
         <?php endforeach;?>
                 </tbody>
               </table>
             </div>
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          <div class="card-footer small text-muted"></div>
         </div>
