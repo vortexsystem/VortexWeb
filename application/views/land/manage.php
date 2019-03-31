@@ -26,6 +26,8 @@
          <?php
 		$x = $regions["locX"] / 256;
 		$y = $regions["locY"] / 256;
+	
+	?>
   <tr>
                     <td><?php echo $regions["regionName"];?></td>
                     <td><?php echo $x; ?> , <?php echo $y;?></td>
