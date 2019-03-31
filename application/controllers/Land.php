@@ -24,7 +24,14 @@ class Land extends CI_Controller {
         }
         public function regions()
         {
-                echo"Regions Go Here Eventually";
+               $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Manage Regions',
+        'message' => 'My Message'
+);     
+                $this->load->view('template_part/header', $data);
+                $this->load->view('land/manage',$data);
+		$this->load->view('template_part/footer', $data);
         }
 
 }
