@@ -9,7 +9,7 @@ class Region_model extends CI_Model
       }
     public function get_regions_by_owner_uuid($uuid, $limit)
       {
-        if(isset($limit)
+        if(isset($limit))
         {
         $the_limit = $limit;
         }
