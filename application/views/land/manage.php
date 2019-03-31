@@ -20,13 +20,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Hudsong</td>
-                    <td>9997, 10031</td>
-                    <td>Mainland Basic($5)</td>
-                    <td>Mainland</td>
-			    <td>Click to Manage</td>
+   
+			  <?php foreach ($region_array as $regions):?>
+
+         
+  <tr>
+                    <td><?php echo $regions["regionName"];?></td>
+                    <td><?php echo $regions["locX"];?> , <?php echo $regions["locY"];?></td>
+                    <td>General Region</td>
+                    <td>Estate Name HEre</td>
+	  <td><a href="<?php echo $regions["uuid"];?>">Click to Manage</a></td>
                   </tr>
+        <?php endforeach;?>
                 </tbody>
               </table>
             </div>
