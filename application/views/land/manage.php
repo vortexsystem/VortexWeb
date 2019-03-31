@@ -12,12 +12,11 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Name</th>
+                    <th>Region</th>
                     <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Product</th>
+                    <th>Estate</th>
+                    <th>Manage</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -26,8 +25,7 @@
                     <td>Marketing Designer</td>
                     <td>London</td>
                     <td>66</td>
-                    <td>2012/11/27</td>
-                    <td>$198,500</td>
+			    <td>2012/11/27</td>
                   </tr>
                 </tbody>
               </table>
