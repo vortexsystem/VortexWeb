@@ -27,6 +27,10 @@
 <div class="row">
     <div class="col">
       <form action="" id="form" method="post">
+	      					<div class="form-group">
+							<label for="desc">Current Password: </label> 
+							<input type="password" class="form-control" name="current" id="current" required>
+						</div>
 						<div class="form-group">
 							<label for="desc">Password:</label> 
 							<input type="password" class="form-control" name="pass" id="pass" required>
@@ -50,6 +54,12 @@
         <li id="number" class="invalid">At least <strong>one number</strong></li>
         <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
     </ul>
+</div>
+	    <div id="passwords_match">
+    <h4>Do your passwords match?</h4>
+		    <p id="password_typed_right">No</p>
+
+   
 </div>
     </div>
   </div>
@@ -89,9 +99,36 @@ if ( pswd.length < 8 ) {
     $('#length').removeClass('invalid').addClass('valid');
 }
 }).focus(function() {
-    $('#pswd_info').show();
+
 }).blur(function() {
-    $('#pswd_info').hide();
+   
+});
+
+});
+</script>
+
+
+<script>
+	$(document).ready(function() {
+
+$('input[id=confpass]').keyup(function() {
+  var _pass = $('#pass').val();
+  var _conf = $('#confpass').val();
+  
+  if (_pass == _conf)
+  {
+     $( "p.password_typed_right" ).text( "Yes" );
+  }
+  else
+  {
+    $( "p.password_typed_right" ).text( "No" );
+  }
+});
+
+}).focus(function() {
+
+}).blur(function() {
+   
 });
 
 });
