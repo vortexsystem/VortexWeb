@@ -56,10 +56,7 @@
     </ul>
 </div>
 	    <div id="passwords_match">
-    <h4>Do your passwords match?</h4>
-		    <p id="password_typed_right">No</p>
-
-   
+ 
 </div>
     </div>
   </div>
@@ -117,11 +114,11 @@ $('input[id=confpass]').keyup(function() {
   
   if (_pass == _conf)
   {
-     $( "p.password_typed_right" ).text( "Yes" );
+     $("div.passwords_match").html( "<p>All new content. <em>You bet!</em></p>" );
   }
   else
   {
-    $( "p.password_typed_right" ).text( "No" );
+    $( "div.passwords_match" ).text( "No" );
   }
 });
 
