@@ -58,7 +58,39 @@ class Land extends CI_Controller {
                 $this->load->view('land/region',$data);
 		$this->load->view('template_part/footer', $data);
         }
+	
 
+	
+	
+        public function estates()
+        {
+		$this->load->model('Re_model', 'land');
+		$current_user = $this->session->uuid;
+		$estate_array = $this->land->get_estates_by_owner_uuid($current_user, 10);
+               $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Manage Estates',
+        'estate_array' => $estate_array
+);     
+		
+                $this->load->view('template_part/header', $data);
+                $this->load->view('land/estatemanage',$data);
+		$this->load->view('template_part/footer', $data);
+        }
+	public function estate($estate_needed)
+        {
+	$this->load->model('Region_model', 'land');
+		$region_array = $this->land->get_region_info($region_needed);
+               $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Region',
+        'region_array' => $region_array	       
+);     
+		
+                $this->load->view('template_part/header', $data);
+                $this->load->view('land/region',$data);
+		$this->load->view('template_part/footer', $data);
+        }
 }
 
 
