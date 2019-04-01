@@ -13,13 +13,12 @@
     border:1px solid #ddd;
 }
 .invalid {
-    background:url(../resources/images/invalid.png) no-repeat 0 50%;
+
     padding-left:22px;
     line-height:24px;
     color:#ec3f41;
 }
 .valid {
-    background:url(../resources/images/valid.png) no-repeat 0 50%;
     padding-left:22px;
     line-height:24px;
     color:#3a7d34;
@@ -61,7 +60,7 @@
 <script>
 	$(document).ready(function() {
 
-    $('input[type=password]').keyup(function() {
+    $('input[id=pass]').keyup(function() {
     var pswd = $(this).val();
 	    //validate letter
 if ( pswd.match(/[A-z]/) ) {
