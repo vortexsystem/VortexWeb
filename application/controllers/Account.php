@@ -32,6 +32,7 @@ class Account extends CI_Controller {
         }
         public function transactions()
         {
+		set_status_header(501);
                 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Transactions',
