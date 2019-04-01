@@ -57,7 +57,7 @@ class Land extends CI_Controller {
                 $this->load->view('template_part/header', $data);
                 $this->load->view('land/region',$data);
 		$this->load->view('template_part/footer', $data);
-        }n
+        }
 
 }
 
