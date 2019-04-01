@@ -102,7 +102,7 @@
           <span>Land</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="landDropdown">
-          <h6 class="dropdown-header">My Regions</h6>
+          <h6 class="dropdown-header">Administration</h6>
           <a class="dropdown-item" href="land/regions">Manage Regions</a>
 	<a class="dropdown-item" href="land/estates">Manage Estates</a>					      
         </div>
