@@ -1,3 +1,30 @@
+<style>
+	#pswd_info {
+    position:absolute;
+    bottom:-75px;
+    bottom: -115px\9; /* IE Specific */
+    right:55px;
+    width:250px;
+    padding:15px;
+    background:#fefefe;
+    font-size:.875em;
+    border-radius:5px;
+    box-shadow:0 1px 3px #ccc;
+    border:1px solid #ddd;
+}
+.invalid {
+    background:url(../resources/images/invalid.png) no-repeat 0 50%;
+    padding-left:22px;
+    line-height:24px;
+    color:#ec3f41;
+}
+.valid {
+    background:url(../resources/images/valid.png) no-repeat 0 50%;
+    padding-left:22px;
+    line-height:24px;
+    color:#3a7d34;
+}
+</style>
 <div class="row">
     <div class="col">
       <form action="" id="form" method="post">
