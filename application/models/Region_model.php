@@ -8,7 +8,7 @@ class Region_model extends CI_Model
         $this->load->database();
 			  $estates = $this->load->database('estates', TRUE);
       }
-    public function get_regions_by_owner_uuid($uuid, $limit)
+    public function get_regions_by_owner_uuid($uuid, $limit = 100)
       {
         if(isset($limit))
         {
