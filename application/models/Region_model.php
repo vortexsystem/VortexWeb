@@ -6,6 +6,7 @@ class Region_model extends CI_Model
       {
         parent::__construct();
         $this->load->database();
+			  $estates = $this->load->database('estates', TRUE);
       }
     public function get_regions_by_owner_uuid($uuid, $limit)
       {
@@ -22,6 +23,27 @@ class Region_model extends CI_Model
         $this->db->where('owner_uuid', $uuid);
         $this->db->limit($the_limit);
         $query = $this->db->get();
+        $row = $query->result_array();
+        if (isset($row))
+          {
+            return $row;
+          }
+      }
+	   public function get_estates_by_owner_uuid($uuid, $limit)
+      {
+        if(isset($limit))
+        {
+        $the_limit = $limit;
+        }
+        else
+        {
+        $the_limit = "100";
+        }
+        $estates->select('*');
+        $estates->from('estates');
+        $estates->where('owner_uuid', $uuid);
+        $estates->limit($the_limit);
+        $query = $estates->get();
         $row = $query->result_array();
         if (isset($row))
           {
