@@ -96,3 +96,4 @@ if ( pswd.length < 8 ) {
 });
 
 });
+</script>
