@@ -13,13 +13,10 @@ engines:
  coverage:
    exclude_paths:
      - config/engines.yml
-languages:
-  css:
-    extensions:
-      - '-css.resource'
 exclude_paths:
   - '.bundle/**'
   - 'spec/**/*'
   - '*.min.js'
   - '**/tests/**' 
   - 'system/**'
+  - 'system/**/**'
