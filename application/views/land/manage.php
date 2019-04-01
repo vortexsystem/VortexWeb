@@ -1,7 +1,5 @@
        <!-- Page Content -->
-        <h1>Manage Regions</h1>
-        <hr>
-<p>You are the owner of 1 region(s) related to 1 estate(s).</p>
+        <h1>Manage Regions</h1><hr>
        <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
