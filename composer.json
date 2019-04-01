@@ -1,6 +1,6 @@
 {
-	"description": "The OpenSimulator Web Interface",
-	"name": "neverworldgrid/myaccount",
+	"description": "Vortex",
+	"name": "neverworldgrid/vortex",
 	"type": "project",
 	"homepage": "https://neverworldgrid.com",
 	"license": "MIT",
