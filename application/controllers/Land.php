@@ -66,7 +66,7 @@ class Land extends CI_Controller {
         {
 		$this->load->model('Region_model', 'land');
 		$current_user = $this->session->uuid;
-		$estate_array = $this->land->get_estates_by_owner_uuid($current_user);
+		$estate_array = $this->land->get_estates_by_owner_uuid($current_user, "100");
                $data = array(
         'base_href' => base_url(),
         'page_title' => 'Manage Estates',
