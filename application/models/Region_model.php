@@ -41,8 +41,8 @@ class Region_model extends CI_Model
         $the_limit = "100";
         }
         $estates->select('*');
-        $estates->from('estates');
-        $estates->where('owner_uuid', $uuid);
+        $estates->from('estate_settings');
+        $estates->where('EstateOwner', $uuid);
         $estates->limit($the_limit);
         $query = $estates->get();
         $row = $query->result_array();
