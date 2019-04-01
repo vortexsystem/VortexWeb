@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
-
+	<script src="https://browser.sentry-cdn.com/4.6.6/bundle.min.js" crossorigin="anonymous"></script>
+	<script>
+		Sentry.init({ dsn: 'https://365ec442d6824b9fbf3e03d42ee64855@sentry.io/1417065' });
+		// This will be changed for all future events
+	</script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
