@@ -44,6 +44,20 @@ class Land extends CI_Controller {
                 $this->load->view('land/manage',$data);
 		$this->load->view('template_part/footer', $data);
         }
+	public function region($region_needed)
+        {
+	$this->load->model('Region_model', 'land');
+		$region_array = $this->land->get_region_info($region_needed);
+               $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Region',
+        'region_array' => $region_array	       
+);     
+		
+                $this->load->view('template_part/header', $data);
+                $this->load->view('land/region',$data);
+		$this->load->view('template_part/footer', $data);
+        }n
 
 }
 
