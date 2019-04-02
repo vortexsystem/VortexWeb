@@ -10,7 +10,6 @@
           <div>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hmOXKUFV2pGtanKMa3q7e0Bw8e4Ngs4VDW1As6hXmV09ZTe3">
           </div>
-          <span class="text-muted">$12</span>
         </li>
     
       </ul>
