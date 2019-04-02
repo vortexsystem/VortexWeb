@@ -8,7 +8,7 @@
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
           <div>
-            <img src="http://app.nwam.tk/Texture/<?php echo $region["regionMapTexture"];?>">
+            <img src="http://app.nwam.tk/Texture/index.php?uuid=<?php echo $region["regionMapTexture"];?>">
           </div>
           <span class="text-muted">$12</span>
         </li>
