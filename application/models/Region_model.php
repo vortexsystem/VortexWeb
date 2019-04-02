@@ -5,7 +5,8 @@ class Region_model extends CI_Model
     function __construct()
       {
         parent::__construct();
-        $this->load->database();
+        $robust = $this->load->database('robust', TRUE);
+        $estates = $this->load->database('estates', TRUE);
       }
     public function get_regions_by_owner_uuid($uuid, $limit)
       {
@@ -17,11 +18,11 @@ class Region_model extends CI_Model
         {
         $the_limit = "100";
         }
-        $this->db->select('*');
-        $this->db->from('regions');
-        $this->db->where('owner_uuid', $uuid);
-        $this->db->limit($the_limit);
-        $query = $this->db->get();
+        $robust->select('*');
+        $robust->from('regions');
+        $robust->where('owner_uuid', $uuid);
+        $robust->limit($the_limit);
+        $query = $robust->get();
         $row = $query->result_array();
         if (isset($row))
           {
@@ -31,7 +32,6 @@ class Region_model extends CI_Model
 
 public function get_estates_by_owner_uuid($uuid, $limit)
       {
-		$estates = $this->load->database('estates', TRUE);
         if(isset($limit))
         {
         $the_limit = $limit;
@@ -53,11 +53,23 @@ public function get_estates_by_owner_uuid($uuid, $limit)
       }
 public function get_region_info($uuid)
       {
-        $this->db->select('*');
-        $this->db->from('regions');
-        $this->db->where('uuid', $uuid);
-        $this->db->limit('1');
-        $query = $this->db->get();
+        $robust->select('*');
+        $robust->from('regions');
+        $robust->where('uuid', $uuid);
+        $robust->limit('1');
+        $query = $robust->get();
+        $row = $query->result_array();
+        if (isset($row))
+          {
+            return $row;
+          }
+public function get_estate_info($eid)
+      {
+        $estates->select('*');
+        $estates->from('estate_settings');
+        $estates->where('EstateID', $eid);
+        $estates->limit('1');
+        $query = $estates->get();
         $row = $query->result_array();
         if (isset($row))
           {
