@@ -17,7 +17,7 @@ $hook['post_controller_constructor'] = function()
 	 // load the instance
       $this->CI =& get_instance();
      
-       if($this->uri->segment(1) !== "user"){
+       if($this->CI_URI->segment(1) !== "user"){
 	if(empty($_SESSION['logged_in']))
 		{
 			redirect('user/login');
