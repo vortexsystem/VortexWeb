@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-     <table class="table table-striped">
+     <table class="table">
   <tbody>
     <tr>
       <th scope="row">Username</th>
