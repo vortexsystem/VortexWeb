@@ -83,7 +83,7 @@ class Land extends CI_Controller {
 		$estate_array = $this->land->get_estate_info($estate_needed);
                $data = array(
         'base_href' => base_url(),
-        'page_title' => 'Region',
+        'page_title' => 'Estate',
         'estate_array' => $estate_array	       
 );     
 		
