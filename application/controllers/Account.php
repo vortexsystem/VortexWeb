@@ -32,7 +32,8 @@ class Account extends CI_Controller {
         }
         public function transactions()
         {
-		set_status_header(511);
+		show_error("The Feature you are trying to access is not yet available", "501", $heading = 'Feature Not Implemented');
+		
                 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Transactions',
