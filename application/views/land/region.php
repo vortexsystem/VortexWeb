@@ -55,15 +55,15 @@
         <div class="row">
           <div class="col-md-4 mb-2">
             <label for="locx">X</label>
-            <input type="text" id="locx" placeholder="" value="<?php echo $region["locX"];?>" readonly class="form-control-plaintext">
+            <input type="text" id="locx" placeholder="" value="<?php echo $region["locX"] /256 ;?>" readonly class="form-control-plaintext">
           </div>
          <div class="col-md-4 mb-2">
             <label for="locy">Y</label>
-            <input type="text" id="locy" placeholder="" value="<?php echo $region["locY"];?>" readonly class="form-control-plaintext">
+            <input type="text" id="locy" placeholder="" value="<?php echo $region["locY"]/256;?>" readonly class="form-control-plaintext">
           </div>
 			<div class="col-md-4 mb-2">
             <label for="locz">Z</label>
-            <input type="text" id="locz" placeholder="" value="<?php echo $region["locZ"];?>" readonly class="form-control-plaintext">
+            <input type="text" id="locz" placeholder="" value="<?php echo $region["locZ"] /256;?>" readonly class="form-control-plaintext">
           </div>
         </div>
 
