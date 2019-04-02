@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'myaccount',
-	'password' => 'MSttQ/;!UBz962Q9',
+	'hostname' => '',
+	'username' => '',
+	'password' => '',
 	'database' => 'web_panel',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -97,9 +97,9 @@ $db['default'] = array(
 
 $db['robust'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'myaccount',
-	'password' => 'MSttQ/;!UBz962Q9',
+	'hostname' => '',
+	'username' => '',
+	'password' => '',
 	'database' => 'opensim',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -115,4 +115,25 @@ $db['robust'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
+);
+$db['estates'] = array(
+        'dsn'   => '',
+        'hostname' => '',
+        'username' => '',
+        'password' => '',
+        'database' => 'estates',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT !== 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
 );
