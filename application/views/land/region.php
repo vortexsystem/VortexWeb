@@ -39,7 +39,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Size in Square Meters</span>
             </div>
-            <input type="text" class="form-control" id="size" value="<?php echo $region["sizeX"] * $region['sizeY'];?> readonly >
+            <input type="text" class="form-control" id="size" value="<?php echo $region["sizeX"] * $region['sizeY'];?>" readonly>
             
           </div>
         </div>
