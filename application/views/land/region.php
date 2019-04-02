@@ -18,15 +18,32 @@
   <tbody>
     <tr>
       <td>Location : <?php echo $region["locX"] /256 ;?> , <?php echo $region["locY"] /256 ;?></td>
+      <td>Last Seen : <?php echo date('m/d/Y', $region["last_seen"]);?></td>
     </tr>
   </tbody>
 </table>
     </div>
     <div class="col-sm">
-      One of three columns
+   	    <h6>Region Technical Info</h6>
+		    <table class="table table-hover">
+  <tbody>
+    <tr>
+      <td>Hosted at  : <?php echo $region["serverIP"];?></td>
+    </tr>
+	  <tr>
+      <td>Region Port : <?php echo $region["serverPort"];?></td>
+    </tr>
+	  <tr>
+      <td>Server URI: <?php echo $region["serverURI"];?></td>
+    </tr>
+	   <tr>
+      <td>Server URI: <?php echo $region["serverURI"];?></td>
+    </tr>
+  </tbody>
+</table>
     </div>
     <div class="col-sm">
-      One of three columns
+	    <h6>Region History</h6>
     </div>
   </div>
                     </center>
