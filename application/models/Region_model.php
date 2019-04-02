@@ -63,6 +63,7 @@ public function get_region_info($uuid)
           {
             return $row;
           }
+}
 public function get_estate_info($eid)
       {
         $estates->select('*');
