@@ -4,10 +4,10 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hmOXKUFV2pGtanKMa3q7e0Bw8e4Ngs4VDW1As6hXmV09ZTe3" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
                     <h3 class="media-heading">Region: <?php echo $region["regionName"];?><small><?php echo $region["uuid"];?></small></h3>
                     <span><strong>Flags </strong></span>
-                        <span class="label label-warning">Payment Due Soon</span>
-                        <span class="label label-info">Locked Out</span>
-                        <span class="label label-info">Fallback Region</span>
-                        <span class="label label-success">Online</span>
+                        <span class="badge badge-warning">Payment Due Soon</span>
+                        <span class="badge badge-info">Locked Out</span>
+                        <span class="badge badge-info">Fallback Region</span>
+                        <span class="badge badge-success">Online</span>
                     </center>
                     <hr>
                     <center>
