@@ -80,11 +80,11 @@ class Land extends CI_Controller {
 	public function estate($estate_needed)
         {
 	$this->load->model('Region_model', 'land');
-		$region_array = $this->land->get_region_info($region_needed);
+		$estate_array = $this->land->get_estate_info($estate_needed);
                $data = array(
         'base_href' => base_url(),
         'page_title' => 'Region',
-        'region_array' => $region_array	       
+        'estate_array' => $estate_array	       
 );     
 		
                 $this->load->view('template_part/header', $data);
