@@ -1,3 +1,4 @@
+<?php foreach ($region_array as $region){ ?>
 <div class="row">
     <div class="col-md-4 order-md-2 mb-4">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -49,22 +50,20 @@
       </form>
     </div>
     <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Billing address</h4>
+      <h4 class="mb-3">Region: <?php echo $region["regionName"];?></h4>
       <form class="needs-validation" novalidate="">
         <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="firstName">First name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
+          <div class="col-md-4 mb-2">
+            <label for="locx">X</label>
+            <input type="text" id="locx" placeholder="" value="<?php echo $region["locX"];?>" readonly class="form-control-plaintext">
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-            <div class="invalid-feedback">
-              Valid last name is required.
-            </div>
+         <div class="col-md-4 mb-2">
+            <label for="locy">Y</label>
+            <input type="text" id="locy" placeholder="" value="<?php echo $region["locY"];?>" readonly class="form-control-plaintext">
+          </div>
+			<div class="col-md-4 mb-2">
+            <label for="locz">Z</label>
+            <input type="text" id="locz" placeholder="" value="<?php echo $region["locZ"];?>" readonly class="form-control-plaintext">
           </div>
         </div>
 
@@ -196,3 +195,4 @@
       </form>
     </div>
   </div>
+  <?php } ?>
