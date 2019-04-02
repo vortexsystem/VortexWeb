@@ -20,6 +20,7 @@ class Account extends CI_Controller {
          */
         public function index()
         {
+		
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
@@ -32,7 +33,7 @@ class Account extends CI_Controller {
         }
         public function transactions()
         {
-		show_error("The Feature you are trying to access is not yet available", "501", $heading = 'Feature Not Implemented');
+		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
 		
                 $data = array(
         'base_href' => base_url(),
@@ -48,6 +49,7 @@ class Account extends CI_Controller {
         }
         public function email()
         {
+		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
                                 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Email Settings',
@@ -62,6 +64,7 @@ class Account extends CI_Controller {
         }
         public function contact()
         {
+		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
                                $data = array(
         'base_href' => base_url(),
         'page_title' => 'Contact Information',
@@ -76,6 +79,7 @@ class Account extends CI_Controller {
         }
         public function partners()
         {
+		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
                                 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Partners',
@@ -90,6 +94,7 @@ class Account extends CI_Controller {
         }
         public function password()
         {
+		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
                                 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Change Password',
