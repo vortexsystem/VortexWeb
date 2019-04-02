@@ -18,8 +18,10 @@
   <tbody>
     <tr>
       <td>Location : <?php echo $region["locX"] /256 ;?> , <?php echo $region["locY"] /256 ;?></td>
-      <td>Last Seen : <?php echo date('m/d/Y', $region["last_seen"]);?></td>
-    </tr>
+     
+    </tr><tr>
+	   <td>Last Seen : <?php echo date('m/d/Y', $region["last_seen"]);?></td>
+	  </tr>
   </tbody>
 </table>
     </div>
