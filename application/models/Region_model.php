@@ -1,15 +1,14 @@
 <?php
 class Region_model extends CI_Model
-
   {
     function __construct()
       {
         parent::__construct();
-        $robust = $this->load->database('robust', TRUE);
-        $estates = $this->load->database('estates', TRUE);
       }
     public function get_regions_by_owner_uuid($uuid, $limit)
       {
+			  $robust = $this->load->database('robust', TRUE);
+        $estates = $this->load->database('estates', TRUE);
         if(isset($limit))
         {
         $the_limit = $limit;
@@ -32,6 +31,8 @@ class Region_model extends CI_Model
 
 public function get_estates_by_owner_uuid($uuid, $limit)
       {
+	        $robust = $this->load->database('robust', TRUE);
+        $estates = $this->load->database('estates', TRUE);
         if(isset($limit))
         {
         $the_limit = $limit;
@@ -53,6 +54,8 @@ public function get_estates_by_owner_uuid($uuid, $limit)
       }
 public function get_region_info($uuid)
       {
+	        $robust = $this->load->database('robust', TRUE);
+        $estates = $this->load->database('estates', TRUE);
         $robust->select('*');
         $robust->from('regions');
         $robust->where('uuid', $uuid);
@@ -66,6 +69,8 @@ public function get_region_info($uuid)
 }
 public function get_estate_info($eid)
       {
+	        $robust = $this->load->database('robust', TRUE);
+        $estates = $this->load->database('estates', TRUE);
         $estates->select('*');
         $estates->from('estate_settings');
         $estates->where('EstateID', $eid);
