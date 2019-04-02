@@ -75,9 +75,15 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+<<<<<<< HEAD
 	'hostname' => 'db.nwam.tk',
 	'username' => 'myaccount',
 	'password' => 'MSttQ!UBz962Q9',
+=======
+	'hostname' => '',
+	'username' => '',
+	'password' => '',
+>>>>>>> b40f9711476b13c70e99f5d30962581e380fc6bd
 	'database' => 'web_panel',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -97,9 +103,15 @@ $db['default'] = array(
 
 $db['robust'] = array(
 	'dsn'	=> '',
+<<<<<<< HEAD
 	'hostname' => 'db.nwam.tk',
 	'username' => 'myaccount',
 	'password' => 'MSttQ!UBz962Q9',
+=======
+	'hostname' => '',
+	'username' => '',
+	'password' => '',
+>>>>>>> b40f9711476b13c70e99f5d30962581e380fc6bd
 	'database' => 'opensim',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -116,12 +128,20 @@ $db['robust'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+<<<<<<< HEAD
 
 $db['estates'] = array(
         'dsn'   => '',
         'hostname' => 'db.nwam.tk',
         'username' => 'myaccount',
         'password' => 'MSttQ!UBz962Q9',
+=======
+$db['estates'] = array(
+        'dsn'   => '',
+        'hostname' => '',
+        'username' => '',
+        'password' => '',
+>>>>>>> b40f9711476b13c70e99f5d30962581e380fc6bd
         'database' => 'estates',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
@@ -138,4 +158,7 @@ $db['estates'] = array(
         'failover' => array(),
         'save_queries' => TRUE
 );
+<<<<<<< HEAD
 
+=======
+>>>>>>> b40f9711476b13c70e99f5d30962581e380fc6bd
