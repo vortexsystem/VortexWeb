@@ -29,7 +29,7 @@ class Region_model extends CI_Model
           }
       }
 
-	public function get_estates_by_owner_uuid($uuid, $limit)
+public function get_estates_by_owner_uuid($uuid, $limit)
       {
 		$estates = $this->load->database('estates', TRUE);
         if(isset($limit))
@@ -45,6 +45,19 @@ class Region_model extends CI_Model
         $estates->where('EstateOwner', $uuid);
         $estates->limit($the_limit);
         $query = $estates->get();
+        $row = $query->result_array();
+        if (isset($row))
+          {
+            return $row;
+          }
+      }
+public function get_region_info($uuid)
+      {
+        $this->db->select('*');
+        $this->db->from('regions');
+        $this->db->where('uuid', $uuid);
+        $this->db->limit('1');
+        $query = $this->db->get();
         $row = $query->result_array();
         if (isset($row))
           {
