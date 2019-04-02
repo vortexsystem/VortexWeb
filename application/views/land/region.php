@@ -24,6 +24,25 @@
             <label for="locz">Z</label>
             <input type="text" id="locz" placeholder="" value="<?php echo $region["locZ"] /256;?>" readonly class="form-control-plaintext">
           </div>
+		
+			    <div class="row">
+    <div class="col-sm">
+	    <h6>Region Basic Info</h6>
+		    <table class="table table-hover">
+  <tbody>
+    <tr>
+      <td>Location : <?php echo $region["locX"] /256 ;?> , <?php echo $region["locY"] /256 ;?></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
                     </center>
 
 
