@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $hook['post_controller_constructor'] = function()
 {
-       if(!$this->session->userdata('logged_in'))
+	if(empty($_SESSION['logged_in']))
 		{
 			redirect('user/login');
 		}
