@@ -1,7 +1,6 @@
 <?php foreach ($estate_array as $estate){ ?>
 
-<hr>
-<div class="container">
+
     <div class="row">
         <div class="col-sm-10">
             <h1>User name</h1></div>
@@ -270,7 +269,5 @@
 
     </div>
     <!--/col-9-->
-</div>
-<!--/row-->
 
   <?php } ?>
