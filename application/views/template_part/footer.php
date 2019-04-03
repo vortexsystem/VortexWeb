@@ -6,7 +6,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright � 2019 Neverworld Grid</span>
+            <span>Copyright © 2019 Neverworld Grid</span>
           </div>
         </div>
       </footer>
@@ -29,7 +29,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
+            <span aria-hidden="true">Ã—</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
@@ -55,7 +55,7 @@
   <!-- Page level plugin JavaScript-->
   <script src="resources/vendor/datatables/jquery.dataTables.js"></script>
   <script src="resources/vendor/datatables/dataTables.bootstrap4.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <!-- Custom scripts for all pages-->
 
   <script src="resources/js/sb-admin.min.js"></script>
