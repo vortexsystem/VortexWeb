@@ -8,7 +8,6 @@ class User_model extends CI_Model
         $this->load->database();
       }
     public function get_uuid_by_user($first, $last)
-
       {
         $this->db->select('PrincipalID');
         $this->db->from('useraccounts');
@@ -53,8 +52,8 @@ class User_model extends CI_Model
     public function check_my_id($salt, $hash, $pass)
 
       {
-        $p = md5($pass);
-        $attempt = md5($p . ":" . $salt);
+        $try = md5($pass);
+        $attempt = md5($try . ":" . $salt);
         // $a2 = md5($attempt);
         if ($attempt == $hash)
           {
