@@ -33,8 +33,6 @@ class Account extends CI_Controller {
         }
         public function transactions()
         {
-		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
-		
                 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Transactions',
@@ -64,8 +62,7 @@ class Account extends CI_Controller {
         }
         public function contact()
         {
-		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
-                               $data = array(
+	$data = array(
         'base_href' => base_url(),
         'page_title' => 'Contact Information',
         'message' => 'My Message'
@@ -79,8 +76,7 @@ class Account extends CI_Controller {
         }
         public function partners()
         {
-		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
-                                $data = array(
+	$data = array(
         'base_href' => base_url(),
         'page_title' => 'Partners',
         'message' => 'My Message'
@@ -94,8 +90,7 @@ class Account extends CI_Controller {
         }
         public function password()
         {
-		show_error("The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability", "501", $heading = '501 - Feature Not Implemented');
-                                $data = array(
+       $data = array(
         'base_href' => base_url(),
         'page_title' => 'Change Password',
         'message' => 'My Message'
@@ -110,11 +105,3 @@ class Account extends CI_Controller {
 
 
 }
-
-
-
-
-
-
-
-
