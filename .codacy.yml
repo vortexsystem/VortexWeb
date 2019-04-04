@@ -1,10 +1,4 @@
 ---
-engines:
- rubocop:
-   enabled: true
- duplication: 
- metric:
- coverage:
 exclude_paths:
   - '.bundle/**'
   - 'spec/**/*'
