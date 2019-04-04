@@ -19,4 +19,4 @@ exclude_paths:
   - '*.min.js'
   - '**/tests/**' 
   - 'system/**'
-  - 'system/**/**'
+  - 'system/**/*'
