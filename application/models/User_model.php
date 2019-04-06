@@ -5,16 +5,16 @@ class User_model extends CI_Model
     function __construct()
       {
         parent::__construct();
-        $this->load->database();
+        $robust = $this->load->database('robust', true);
       }
     public function get_uuid_by_user($first, $last)
       {
-        $this->db->select('PrincipalID');
-        $this->db->from('useraccounts');
-        $this->db->where('FirstName', $first);
-        $this->db->where('LastName', $last);
-        $this->db->limit(1);
-        $query = $this->db->get();
+        $robust->select('PrincipalID');
+        $robust->from('useraccounts');
+        $robust->where('FirstName', $first);
+        $robust->where('LastName', $last);
+        $robust->limit(1);
+        $query = $robust->get();
         $row = $query->row();
         if (isset($row))
           {
@@ -24,11 +24,11 @@ class User_model extends CI_Model
     public function get_hash_by_uuid($uuid)
 
       {
-        $this->db->select('passwordHash');
-        $this->db->from('auth');
-        $this->db->where('UUID', $uuid);
-        $this->db->limit(1);
-        $query = $this->db->get();
+        $robust->select('passwordHash');
+        $robust->from('auth');
+        $robust->where('UUID', $uuid);
+        $robust->limit(1);
+        $query = $robust->get();
         $row = $query->row();
         if (isset($row))
           {
@@ -38,11 +38,11 @@ class User_model extends CI_Model
     public function get_salt_by_uuid($uuid)
 
       {
-        $this->db->select('passwordSalt');
-        $this->db->from('auth');
-        $this->db->where('UUID', $uuid);
-        $this->db->limit(1);
-        $query = $this->db->get();
+        $robust->select('passwordSalt');
+        $robust->from('auth');
+        $robust->where('UUID', $uuid);
+        $robust->limit(1);
+        $query = $robust->get();
         $row = $query->row();
         if (isset($row))
           {
