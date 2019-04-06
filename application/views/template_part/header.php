@@ -56,30 +56,16 @@
           <span class="badge badge-danger">9+</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-<div class="alert alert-secondary" role="alert">
-  A simple secondary alert—check it out!
-</div>
-<div class="alert alert-success" role="alert">
-  A simple success alert—check it out!
-</div>
-<div class="alert alert-danger" role="alert">
-  A simple danger alert—check it out!
-</div>
-<div class="alert alert-warning" role="alert">
-  A simple warning alert—check it out!
-</div>
-<div class="alert alert-info" role="alert">
-  A simple info alert—check it out!
-</div>
-<div class="alert alert-light" role="alert">
-  A simple light alert—check it out!
-</div>
-<div class="alert alert-dark" role="alert">
-  A simple dark alert—check it out!
-</div>
+      <li class="nav-item dropdown no-arrow mx-1">
+        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-envelope fa-fw"></i>
+          <span class="badge badge-danger">7</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
      <li class="nav-item dropdown no-arrow">
