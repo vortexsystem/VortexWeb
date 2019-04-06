@@ -5,10 +5,10 @@ class User_model extends CI_Model
     function __construct()
       {
         parent::__construct();
-        $robust = $this->load->database('robust', true);
       }
     public function get_uuid_by_user($first, $last)
       {
+			  $robust = $this->load->database('robust', true);
         $robust->select('PrincipalID');
         $robust->from('useraccounts');
         $robust->where('FirstName', $first);
@@ -22,8 +22,8 @@ class User_model extends CI_Model
           }
       }
     public function get_hash_by_uuid($uuid)
-
       {
+			  $robust = $this->load->database('robust', true);
         $robust->select('passwordHash');
         $robust->from('auth');
         $robust->where('UUID', $uuid);
@@ -36,8 +36,8 @@ class User_model extends CI_Model
           }
       }
     public function get_salt_by_uuid($uuid)
-
       {
+			  $robust = $this->load->database('robust', true);
         $robust->select('passwordSalt');
         $robust->from('auth');
         $robust->where('UUID', $uuid);
