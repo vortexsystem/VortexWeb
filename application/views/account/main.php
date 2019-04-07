@@ -49,7 +49,7 @@
 	    <ul class="list-group">
 	    <?php foreach ($friends_array as $friends){ ?>
 	    
-  <li class="list-group-item"><?php echo $friends['name'];?></li>
+  <li class="list-group-item"><?php echo $friends["name"];?></li>
 
 
 	    <?php } ?>
