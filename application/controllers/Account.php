@@ -26,7 +26,7 @@ class Account extends CI_Controller {
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
-        'friends' => $friends_array
+        'friends_array' => $friends_array
 );     
 
                 $this->load->view('template_part/header', $data);
