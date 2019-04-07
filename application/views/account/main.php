@@ -46,6 +46,14 @@
   <div class="row">
     <div class="col">
 			<h6>My Friends</h6>
+	    <ul class="list-group">
+	    <?php foreach ($friends_array as $friends){ ?>
+	    
+  <li class="list-group-item"><?php echo $friends["name"];?></li>
+
+
+	    <?php } ?>
+		    </ul>
     </div>
     <div class="col">
 			<h6>Upcoming Events</h6>
