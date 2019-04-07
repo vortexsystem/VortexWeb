@@ -20,11 +20,13 @@ class Account extends CI_Controller {
          */
         public function index()
         {
-		
+		$this->load->model('Friends_model', 'friends');
+		$current_user = $this->session->uuid;
+		$friends_array = $this->friends->get_friends($current_user);
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
-        'message' => 'My Message'
+        'friends' => $friends_array
 );     
 
                 $this->load->view('template_part/header', $data);
