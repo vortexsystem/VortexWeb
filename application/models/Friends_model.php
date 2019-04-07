@@ -10,7 +10,7 @@ class Friends_model extends CI_Model
 	$robust = $this->load->database('robust', TRUE);
         $estates = $this->load->database('estates', TRUE);
         $robust->select("friends.Friend, friends.Flags, concat(useraccounts.FirstName, ' ', useraccounts.LastName) AS 'name'");
-        $robust->from('friends');
+        $robust->from(array('friends','useraccounts'));
         $robust->where('friends.PrincipalID', $uuid);
         $query = $robust->get();
         $row = $query->result_array();
