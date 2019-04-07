@@ -1,3 +1,28 @@
+<?php
+function getFlagNameByNumber($number)
+{
+    // 0 = Fried request 
+    // OR (if uuid = principalid)
+    // 0 = Friend request accepted
+    // 1 see if connected
+    // 3 see on map
+    // 4 move/take objects
+    // 7 full
+    if ($number == 0)
+        $Flags = '<i data-toggle="tooltip" class="glyphicon glyphicon-ban-circle text-danger" title="No right"></i>';
+    else if ($number == 1)
+        $Flags = '<i data-toggle="tooltip" class="glyphicon glyphicon-eye-open text-success" title="See if connected"></i>';
+    else if ($number == 3)
+        $Flags = '<i data-toggle="tooltip" class="glyphicon glyphicon-globe text-success" title="See on map"></i>';
+    else if ($number == 4)
+        $Flags = '<i data-toggle="tooltip" class="glyphicon glyphicon-gift text-success" title="Move/Take objects"></i>';
+    else if ($number == 7)
+        $Flags = '<i data-toggle="tooltip" class="glyphicon glyphicon-education text-danger" title="Full right"></i>';
+    else $number = '<i data-toggle="tooltip" class="glyphicon glyphicon-question-sign text-danger" title="Unknow flag"></i>';
+    return $Flags;
+}
+
+?>
 <div class="container">
   <div class="row">
     <div class="col">
@@ -49,7 +74,7 @@
 	    <ul class="list-group">
 	    <?php foreach ($friends_array as $friends){ ?>
 	    
-  <li class="list-group-item"><?php echo $friends["name"];?></li>
+  <li class="list-group-item"><?php getFlagNameByNumber($friends["Flags"]);?></li>
 
 
 	    <?php } ?>
