@@ -19,7 +19,7 @@ function getFlagNameByNumber($number)
     else if ($number == 7)
         $Flags = '<i data-toggle="tooltip" class="glyphicon glyphicon-education text-danger" title="Full right"></i>';
     else $number = '<i data-toggle="tooltip" class="glyphicon glyphicon-question-sign text-danger" title="Unknow flag"></i>';
-    return $Flags;
+    echo $Flags;
 }
 
 ?>
