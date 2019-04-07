@@ -74,7 +74,7 @@ function getFlagNameByNumber($number)
 	    <ul class="list-group">
 	    <?php foreach ($friends_array as $friends){ ?>
 	    
-  <li class="list-group-item"><?php echo $friends['Friend'];?> <?php getFlagNameByNumber($friends["Flags"]);?></li>
+  <li class="list-group-item"><?php echo $friends['name'];?> <?php getFlagNameByNumber($friends["Flags"]);?></li>
 
 
 	    <?php } ?>
