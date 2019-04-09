@@ -122,6 +122,11 @@
 
       </li>
 
+<li class="nav-item">
+        <a class="nav-link" href="events/">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Events</span></a>
+      </li>
     </ul>
 
     <div id="content-wrapper">
