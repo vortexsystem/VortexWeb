@@ -1,208 +1,143 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
- * @package   CodeIgniter
- * @author    Emmanuel CAMPAIT
- * @copyright Copyright (c) 2013 - 2019, domProjects (https://domprojects.com)
- * @license   http://opensource.org/licenses/MIT	MIT License
- * @link      https://domprojects.com
- * @since     Version 1.1.0
- */
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * HTML Breadcrumb Generating Class
+ * Breadcrumb Class
  *
+ * This class manages the breadcrumb object
  *
- * @package    CodeIgniter
- * @subpackage Libraries
- * @category   HTML Breadcrumb
- * @author     Emmanuel CAMPAIT
- * @link       https://domprojects.com
+ * @package		Breadcrumb
+ * @version		1.0
+ * @author 		Richard Davey <info@richarddavey.com>
+ * @copyright 	Copyright (c) 2011, Richard Davey
+ * @link		https://github.com/richarddavey/codeigniter-breadcrumb
  */
-class Breadcrumb
-{
-	protected $CI;
-
-	private $breadcrumb = [];
-
+class Breadcrumb {
+	
 	/**
-	 * breadcrumb layout template
+	 * Breadcrumbs stack
 	 *
-	 * @var array
+     */
+	private $breadcrumbs	= array();
+	
+	/**
+	 * Options
+	 *
 	 */
-	public $template = NULL;
-
+	private $_divider 		= ' &nbsp;&#8250;&nbsp; ';
+	private $_tag_open 		= '<div id="breadcrumb">';
+	private $_tag_close 	= '</div>';
+	
 	/**
-	 * Newline setting
+	 * Constructor
 	 *
-	 * @var string
+	 * @access	public
+	 * @param	array	initialization parameters
 	 */
-	public $newline = "\n";
-
+	public function __construct($params = array())
+	{
+		if (count($params) > 0)
+		{
+			$this->initialize($params);
+		}
+		
+		log_message('debug', "Breadcrumb Class Initialized");
+	}
+	// --------------------------------------------------------------------
 	/**
-	 * Set the template from the breadcrumb config file if it exists
+	 * Initialize Preferences
 	 *
-	 * @param	array	$config	(default: array())
+	 * @access	public
+	 * @param	array	initialization parameters
 	 * @return	void
 	 */
-	public function __construct($config = [])
+	private function initialize($params = array())
 	{
-		//
-		$this->CI =& get_instance();
-
-		//
-		$this->CI->load->helper('url');
-
-		// initialize config
-		foreach ($config as $key => $val)
+		if (count($params) > 0)
 		{
-			$this->template[$key] = $val;
-		}
-
-		log_message('info', 'Breadcrumb Class Initialized');
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * Set the template
-	 *
-	 * @param	array	$template
-	 * @return	bool
-	 */
-	public function set_template($template)
-	{
-		if ( ! is_array($template))
-		{
-			return FALSE;
-		}
-		else
-		{
-			$this->template = $template;
-			return TRUE;
-		}
-	}
-
-	// --------------------------------------------------------------------
-
-	public function add_item($args)
-	{
-		if ( ! is_array($args) OR empty($args))
-		{
-			return FALSE;
-		}
-		else
-		{
-			foreach ($args as $key => $value)
+			foreach ($params as $key => $val)
 			{
-				$href = site_url($value);
-
-				$this->breadcrumb[$href] = [
-					'page' => $key,
-					'href' => $href
-				];
+				if (isset($this->{'_' . $key}))
+				{
+					$this->{'_' . $key} = $val;
+				}
 			}
 		}
 	}
-
+	
 	// --------------------------------------------------------------------
-
 	/**
-	 * Generate the breadcrumb
+	 * Append crumb to stack
 	 *
-	 * @param	mixed	$breadcrumb_data
+	 * @access	public
+	 * @param	string $title
+	 * @param	string $href
+	 * @return	void
+	 */		
+	function append_crumb($title, $href)
+	{
+		// no title or href provided
+		if (!$title OR !$href) return;
+		
+		// add to end
+		$this->breadcrumbs[] = array('title' => $title, 'href' => $href);
+	}
+	
+	// --------------------------------------------------------------------
+	/**
+	 * Prepend crumb to stack
+	 *
+	 * @access	public
+	 * @param	string $title
+	 * @param	string $href
+	 * @return	void
+	 */		
+	function prepend_crumb($title, $href)
+	{
+		// no title or href provided
+		if (!$title OR !$href) return;
+		
+		// add to start
+		array_unshift($this->breadcrumbs, array('title' => $title, 'href' => $href));
+	}
+	
+	// --------------------------------------------------------------------
+	/**
+	 * Generate breadcrumb
+	 *
+	 * @access	public
 	 * @return	string
-	 */
-	public function generate()
+	 */		
+	function output()
 	{
-		if ($this->breadcrumb)
-		{
-			// Compile and validate the template date
-			$this->_compile_template();
-
-			// Build the breadcrumb
-			$out = $this->template['tag_open'].$this->newline;
-
-			foreach ($this->breadcrumb as $key => $value)
-			{
-				$keys = array_keys($this->breadcrumb);
-
-				if (end($keys) == $key)
-				{
-					$out .= $this->template['crumb_active'].$value['page'].$this->template['crumb_close'].$this->newline;
-				}
-				else
-				{
-					$out .= $this->template['crumb_open'];
-					$out .= anchor($value['href'], $value['page']);
-					$out .= $this->template['crumb_close'];
-					$out .= $this->newline;
+		// breadcrumb found
+		if ($this->breadcrumbs) {
+		
+			// set output variable
+			$output = $this->_tag_open;
+			
+			// add html to output
+			foreach ($this->breadcrumbs as $key => $crumb) {
+				
+				// add divider
+				if ($key) $output .= $this->_divider;
+				
+				// if last element
+				if (end(array_keys($this->breadcrumbs)) == $key) {
+					$output .= '<span>' . $crumb['title'] . '</span>';
+					
+				// else add link and divider
+				} else {
+					$output .= '<a href="' . $crumb['href'] . '">' . $crumb['title'] . '</a>';
 				}
 			}
-
-			$out .= $this->template['tag_close'].$this->newline;
-
-			// Clear Breadcrumb class properties before generating the breadcrumb
-			$this->clear();
-
-			return $out;
+			
+			// return html
+			return $output . $this->_tag_close . PHP_EOL;
 		}
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * Clears the breadcrumb arrays. Useful if multiple tables are being generated
-	 *
-	 * @return	Breadcrumb
-	 */
-	public function clear()
-	{
-		$this->breadcrumb = [];
-		return $this;
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * Compile Template
-	 *
-	 * @return	void
-	 */
-	protected function _compile_template()
-	{
-		if ($this->template === NULL)
-		{
-			$this->template = $this->_default_template();
-			return;
-		}
-
-		$this->temp = $this->_default_template();
-
-		foreach (array('tag_open', 'tag_close', 'crumb_open', 'crumb_close', 'crumb_active') as $val)
-		{
-			if ( ! isset($this->template[$val]))
-			{
-				$this->template[$val] = $this->temp[$val];
-			}
-		}
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * Default Template
-	 *
-	 * @return	array
-	 */
-	protected function _default_template()
-	{
-		return [
-			'tag_open' => '<ol>',
-			'tag_close' => '</ol>',
-			'crumb_open' => '<li>',
-			'crumb_close' => '</li>',
-			'crumb_active' => '<li class="active">'
-		];
+		
+		// return blank string
+		return '';
 	}
 }
+// END Breadcrumb Class
+/* End of file Breadcrumb.php */
+/* Location: ./application/libraries/Breadcrumb.php */
