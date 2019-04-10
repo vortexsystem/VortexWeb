@@ -27,14 +27,10 @@ class Account extends CI_Controller {
 		$friends_array = $this->friends->get_friends($current_user);
 		// Now make Breadcrumbs and stuff that goes on every page
 		// add breadcrumbs
-		$this->load->library('breadcrumb');
-		$this->breadcrumb->append_crumb('Home', '/');
-		$this->breadcrumb->append_crumb('Page', '/page');
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
-        'friends_array' => $friends_array,
-	'breadcrumbs' => $this->breadcrumb->output()
+        'friends_array' => $friends_array
 );     
 
                 $this->load->view('template_part/header', $data);
