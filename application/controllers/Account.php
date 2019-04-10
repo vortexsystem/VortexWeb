@@ -28,8 +28,8 @@ class Account extends CI_Controller {
 		// Now make Breadcrumbs and stuff that goes on every page
 		// add breadcrumbs
 		$this->load->library('breadcrumb');
-		$this->breadcrumb->appendCrumb('Home', '/');
-		$this->breadcrumb->appendCrumb('Page', '/page');
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Page', '/page');
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
