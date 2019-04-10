@@ -135,7 +135,7 @@
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
-          <?php echo $breadcrumb; ?>
+          <?php echo $breadcrumbs; ?>
 
 
 <?php
