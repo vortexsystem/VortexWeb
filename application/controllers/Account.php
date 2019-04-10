@@ -20,13 +20,20 @@ class Account extends CI_Controller {
          */
         public function index()
         {
+		// Create Data from DB first
+		
 		$this->load->model('Friends_model', 'friends');
 		$current_user = $this->session->uuid;
 		$friends_array = $this->friends->get_friends($current_user);
+		// Now make Breadcrumbs and stuff that goes on every page
+		// add breadcrumbs
+		$this->breadcrumb->appendCrumb('Home', '/');
+		$this->breadcrumb->appendCrumb('Page', '/page');
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
-        'friends_array' => $friends_array
+        'friends_array' => $friends_array,
+	'breadcrumbs' => $this->breadcrumb->output()
 );     
 
                 $this->load->view('template_part/header', $data);
