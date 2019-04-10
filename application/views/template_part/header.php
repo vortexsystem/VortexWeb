@@ -135,7 +135,8 @@
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
-          <?php echo $breadcrumbs; ?>
+			      <li class="breadcrumb-item">Home</li>
+			      
 
 
 <?php
