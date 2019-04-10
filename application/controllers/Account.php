@@ -27,6 +27,7 @@ class Account extends CI_Controller {
 		$friends_array = $this->friends->get_friends($current_user);
 		// Now make Breadcrumbs and stuff that goes on every page
 		// add breadcrumbs
+		$this->load->library('breadcrumb');
 		$this->breadcrumb->appendCrumb('Home', '/');
 		$this->breadcrumb->appendCrumb('Page', '/page');
 		$data = array(
