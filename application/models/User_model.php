@@ -95,15 +95,14 @@ public function getUserInfoByEmail($email)
     }
 public function insertToken($PrincipalID)
     {   
-	$robust = $this->load->database('robust', true);
+	$web = $this->load->database('', true);
         $token = $this->uuid();
-        
         $string = array(
                 'token'=> $token,
                 'user_id'=>$PrincipalID,
             );
-        $query = $robust->insert_string('tokens',$string);
-        $robust->query($query);
+        $query = $web->insert_string('tokens',$string);
+        $web->query($query);
         return $token;
         
     }
