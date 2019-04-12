@@ -30,6 +30,7 @@
           <h4>Forgot your password?</h4>
           <p>Enter your email address and we will send you instructions on how to reset your password.</p>
         </div>
+				<?php  echo form_open(site_url().'user/forgot'); ?>
         <div class="form-group">
       <?php echo form_input(array(
           'name'=>'email', 
