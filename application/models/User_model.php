@@ -105,7 +105,7 @@ public function insertToken($PrincipalID)
                 'created'=>$date
             );
         $query = $robust->insert_string('tokens',$string);
-        $this->db->query($query);
+        $robust->query($query);
         return $token;
         
     }
