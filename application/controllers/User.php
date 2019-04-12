@@ -59,6 +59,19 @@ redirect('/');
     $this->session->sess_destroy();
     redirect('/user/login');
   }
+public function forgot(){
+$data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Forgot Password',
+);	
+	
+	 $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
+            
+            if($this->form_validation->run() == FALSE) {
+		$this->load->view('user/forgot', $data);
+	    }
+            
+  } 	
 
 
 }
