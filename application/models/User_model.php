@@ -104,9 +104,9 @@ public function insertToken($PrincipalID)
                 'user_id'=>$PrincipalID,
                 'created'=>$date
             );
-        $query = $this->db->insert_string('tokens',$string);
+        $query = $robust->insert_string('tokens',$string);
         $this->db->query($query);
-        return $token . $PrincipalID;
+        return $token;
         
     }
   }
