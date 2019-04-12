@@ -81,15 +81,15 @@ class User_model extends CI_Model
           }
       }
 	
-  public function getUserInfo($id)
+    public function getUserInfoByEmail($email)
     {
 	$robust = $this->load->database('robust', true);
-        $q = $robust->get_where('useraccounts', array('PrincipalID' => $id), 1);  
+        $q = $robust->get_where('useraccounts', array('email' => $email), 1);  
         if($robust->affected_rows() > 0){
             $row = $q->row();
             return $row;
         }else{
-            error_log('no user found getUserInfo('.$id.')');
+            error_log('no user found getUserInfo('.$email.')');
             return false;
         }
     }
