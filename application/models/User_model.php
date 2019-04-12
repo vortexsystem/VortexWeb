@@ -96,7 +96,7 @@ class User_model extends CI_Model
 public function insertToken($PrincipalID)
     {   
 	$robust = $this->load->database('robust', true);
-        $token = file_get_contents('https://www.uuidgenerator.net/api/version4');
+        $token = $this->uuid();
         
         $string = array(
                 'token'=> $token,
@@ -107,5 +107,15 @@ public function insertToken($PrincipalID)
         return $token;
         
     }
+private function uuid()
+{
+    return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+        mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+        mt_rand(0, 0xffff),
+        mt_rand(0, 0x0fff) | 0x4000,
+        mt_rand(0, 0x3fff) | 0x8000,
+        mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+    );
+}
   }
 ?>
