@@ -90,9 +90,9 @@ class User extends CI_Controller
     {
         return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT));
     }
-    public function reset_password()
+    public function reset_password($runner)
     {
-        $token      = $this->base64url_decode($this->uri->segment(4));
+        $token      = $this->base64url_decode($runner);
         $cleanToken = $this->security->xss_clean($token);
         
         $user_info = $this->user_model->isTokenValid($cleanToken); //either false or array();               
