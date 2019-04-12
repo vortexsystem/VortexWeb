@@ -52,8 +52,8 @@ echo "<div class='alert alert-danger' role='alert'>". $message . "</div>";
             <button type="submit" class="btn btn-primary">Login</button>
             </form>
             <div class="text-center">
-               <a class="d-block small mt-3" href="register.html">Register an Account</a>
-               <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+               <a class="d-block small mt-3" href="user/register">Register an Account</a>
+               <a class="d-block small" href="user/forgot">Forgot Password?</a>
             </div>
          </div>
       </div>
