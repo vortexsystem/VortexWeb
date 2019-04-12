@@ -23,7 +23,7 @@ class User_model extends CI_Model
       }
     public function get_hash_by_uuid($uuid)
       {
-			  $robust = $this->load->database('robust', true);
+	$robust = $this->load->database('robust', true);
         $robust->select('passwordHash');
         $robust->from('auth');
         $robust->where('UUID', $uuid);
@@ -80,5 +80,18 @@ class User_model extends CI_Model
             return "FALSE";
           }
       }
+	
+  public function getUserInfo($id)
+    {
+	$robust = $this->load->database('robust', true);
+        $q = $robust->get_where('useraccounts', array('PrincipalID' => $id), 1);  
+        if($robust->affected_rows() > 0){
+            $row = $q->row();
+            return $row;
+        }else{
+            error_log('no user found getUserInfo('.$id.')');
+            return false;
+        }
+    }
   }
 ?>
