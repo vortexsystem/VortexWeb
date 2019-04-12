@@ -61,6 +61,7 @@ redirect('/');
     redirect('/user/login');
   }
 public function forgot(){
+	     $this->load->model('User_model', 'auth');
 $data = array(
         'base_href' => base_url(),
         'page_title' => 'Forgot Password',
@@ -75,12 +76,12 @@ $data = array(
 	
 	        $email = $this->input->post('email');  
                 $clean = $this->security->xss_clean($email);
-                $userInfo = $this->user_model->getUserInfoByEmail($clean);
+                $userInfo = $this->auth->getUserInfoByEmail($clean);
                
                 
                 //build token 
 				
-                $token = $this->user_model->insertToken($userInfo->id);                        
+                $token = $this->auth->insertNewToken($userInfo->id);                        
                 $qstring = $this->base64url_encode($token);                  
                 $url = site_url() . 'user/reset_password/' . $qstring;
                 $link = '<a href="' . $url . '">' . $url . '</a>'; 
