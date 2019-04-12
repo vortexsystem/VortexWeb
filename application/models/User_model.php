@@ -81,7 +81,7 @@ class User_model extends CI_Model
           }
       }
 	
-    public function getUserInfoByEmail($email)
+public function getUserInfoByEmail($email)
     {
 	$robust = $this->load->database('robust', true);
         $q = $robust->get_where('useraccounts', array('email' => $email), 1);  
