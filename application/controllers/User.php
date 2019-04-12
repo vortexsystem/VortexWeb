@@ -82,11 +82,54 @@ class User extends CI_Controller
             exit;
         }
     }
-	  public function base64url_encode($data) { 
-      return rtrim(strtr(base64_encode($data), '+/', '-_'), '='); 
-    } 
-    public function base64url_decode($data) { 
-      return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT)); 
-    }       
+    public function base64url_encode($data)
+    {
+        return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
+    }
+    public function base64url_decode($data)
+    {
+        return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT));
+    }
+    public function reset_password()
+    {
+        $token      = $this->base64url_decode($this->uri->segment(4));
+        $cleanToken = $this->security->xss_clean($token);
+        
+        $user_info = $this->user_model->isTokenValid($cleanToken); //either false or array();               
+        
+        if (!$user_info) {
+            $this->session->set_flashdata('flash_message', 'Token is invalid or expired');
+            redirect(site_url() . 'main/login');
+        }
+        $data = array(
+            'firstName' => $user_info->first_name,
+            'email' => $user_info->email,
+            //                'user_id'=>$user_info->id, 
+            'token' => $this->base64url_encode($token)
+        );
+        
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
+        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[password]');
+        
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('user/reset_password', $data);
+        } else {
+            
+            $this->load->library('password');
+            $post                  = $this->input->post(NULL, TRUE);
+            $cleanPost             = $this->security->xss_clean($post);
+            $hashed                = $this->password->create_hash($cleanPost['password']);
+            $cleanPost['password'] = $hashed;
+            $cleanPost['user_id']  = $user_info->id;
+            unset($cleanPost['passconf']);
+            if (!$this->user_model->updatePassword($cleanPost)) {
+                $this->session->set_flashdata('flash_message', 'There was a problem updating your password');
+            } else {
+                $this->session->set_flashdata('flash_message', 'Your password has been updated. You may now login');
+            }
+            redirect(site_url() . 'main/login');
+        }
+    }
+    
 }
 ?>
