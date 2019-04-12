@@ -92,14 +92,15 @@ class User extends CI_Controller
     }
     public function reset_password($runner)
     {
+      $this->load->model('User_model', 'auth');
         $token      = $this->base64url_decode($runner);
         $cleanToken = $this->security->xss_clean($token);
         
-        $user_info = $this->user_model->isTokenValid($cleanToken); //either false or array();               
+        $user_info = $this->auth->isTokenValid($cleanToken); //either false or array();               
         
         if (!$user_info) {
             $this->session->set_flashdata('flash_message', 'Token is invalid or expired');
-            redirect(site_url() . 'main/login');
+            redirect(site_url() . 'user/login');
         }
         $data = array(
             'firstName' => $user_info->first_name,
@@ -122,12 +123,12 @@ class User extends CI_Controller
             $cleanPost['password'] = $hashed;
             $cleanPost['user_id']  = $user_info->id;
             unset($cleanPost['passconf']);
-            if (!$this->user_model->updatePassword($cleanPost)) {
+            if (!$this->auth->updatePassword($cleanPost)) {
                 $this->session->set_flashdata('flash_message', 'There was a problem updating your password');
             } else {
                 $this->session->set_flashdata('flash_message', 'Your password has been updated. You may now login');
             }
-            redirect(site_url() . 'main/login');
+            redirect(site_url() . 'user/login');
         }
     }
     
