@@ -71,6 +71,25 @@ $data = array(
             if($this->form_validation->run() == FALSE) {
 		$this->load->view('user/forgot', $data);
 	    }
+	
+	
+	        $email = $this->input->post('email');  
+                $clean = $this->security->xss_clean($email);
+                $userInfo = $this->user_model->getUserInfoByEmail($clean);
+               
+                
+                //build token 
+				
+                $token = $this->user_model->insertToken($userInfo->id);                        
+                $qstring = $this->base64url_encode($token);                  
+                $url = site_url() . 'user/reset_password/' . $qstring;
+                $link = '<a href="' . $url . '">' . $url . '</a>'; 
+                
+                $message = '';                     
+                $message .= '<strong>A password reset has been requested for this email account</strong><br>';
+                $message .= '<strong>Please click:</strong> ' . $link;             
+                echo $message; //send this through mail
+                exit;
             
   } 	
 
