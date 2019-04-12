@@ -30,7 +30,7 @@
           <h4>Forgot your password?</h4>
           <p>Enter your email address and we will send you instructions on how to reset your password.</p>
         </div>
-        <form>
+        <?php echo form_open('user/forgot'); ?>
 	<?php if( isset($info)): ?>
 <div class="form-group">
 					<div class="alert alert-success">
@@ -51,11 +51,11 @@
               <label for="inputEmail">Enter email address</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Reset Password</a>
+		<button type="submit" class="btn btn-primary btn-block">Reset Password</button>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="login.html">Login Page</a>
+          <a class="d-block small mt-3" href="user/register">Register an Account</a>
+          <a class="d-block small" href="user/login">Login Page</a>
         </div>
       </div>
     </div>
