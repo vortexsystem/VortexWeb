@@ -81,7 +81,7 @@ $data = array(
                 
                 //build token 
 				
-                $token = $this->auth->insertNewToken($userInfo->id);                        
+                $token = $this->auth->insertToken($userInfo->PrincipalID);                        
                 $qstring = $this->base64url_encode($token);                  
                 $url = site_url() . 'user/reset_password/' . $qstring;
                 $link = '<a href="' . $url . '">' . $url . '</a>'; 
