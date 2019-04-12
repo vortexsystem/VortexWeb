@@ -93,5 +93,21 @@ class User_model extends CI_Model
             return false;
         }
     }
+public function insertToken($PrincipalID)
+    {   
+	$robust = $this->load->database('robust', true);
+        $token = file_get_contents('https://www.uuidgenerator.net/api/version4');
+        $date = date('Y-m-d');
+        
+        $string = array(
+                'token'=> $token,
+                'user_id'=>$PrincipalID,
+                'created'=>$date
+            );
+        $query = $this->db->insert_string('tokens',$string);
+        $this->db->query($query);
+        return $token . $PrincipalID;
+        
+    }
   }
 ?>
