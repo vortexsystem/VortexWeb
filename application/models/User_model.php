@@ -98,9 +98,9 @@ class User_model extends CI_Model
     }
   public function getUserInfo($id)
     {
-	    $web = $this->load->database('', true);
-        $q = $web->get_where('users', array('id' => $id), 1);  
-        if($web->affected_rows() > 0){
+	    $robust = $this->load->database('robust', true);
+        $q = $robust->get_where('useraccounts', array('PrincipalID' => $id), 1);  
+        if($robust->affected_rows() > 0){
             $row = $q->row();
             return $row;
         }else{
