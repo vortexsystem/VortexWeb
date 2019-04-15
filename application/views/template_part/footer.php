@@ -6,7 +6,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © 2019 Neverworld Grid</span>
+            <span>Copyright © 2019 Neverworld Grid. Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></span>
           </div>
         </div>
       </footer>
