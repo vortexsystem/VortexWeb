@@ -96,6 +96,18 @@ class User_model extends CI_Model
         return $token;
         
     }
+  public function getUserInfo($id)
+    {
+	    $web = $this->load->database('', true);
+        $q = $web->get_where('users', array('id' => $id), 1);  
+        if($web->affected_rows() > 0){
+            $row = $q->row();
+            return $row;
+        }else{
+            error_log('no user found getUserInfo('.$id.')');
+            return false;
+        }
+    }
     private function uuid()
     {
         return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x', mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0x0fff) | 0x4000, mt_rand(0, 0x3fff) | 0x8000, mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff));
