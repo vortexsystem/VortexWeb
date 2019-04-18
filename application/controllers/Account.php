@@ -23,8 +23,10 @@ class Account extends CI_Controller {
 		// Create Data from DB first
 		
 		$this->load->model('Friends_model', 'friends');
+		$this->load->model('Groups_model', 'groups');
 		$current_user = $this->session->uuid;
 		$friends_array = $this->friends->get_friends($current_user);
+		$groups_array = $this->groups->get_groups($current_user);
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
