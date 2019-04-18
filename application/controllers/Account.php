@@ -25,12 +25,11 @@ class Account extends CI_Controller {
 		$this->load->model('Friends_model', 'friends');
 		$current_user = $this->session->uuid;
 		$friends_array = $this->friends->get_friends($current_user);
-		// Now make Breadcrumbs and stuff that goes on every page
-		// add breadcrumbs
 		$data = array(
         'base_href' => base_url(),
         'page_title' => 'Account Summary',
-        'friends_array' => $friends_array
+        'friends_array' => $friends_array,
+        'groups_array' => $groups_array
 );     
 
                 $this->load->view('template_part/header', $data);
@@ -48,8 +47,6 @@ class Account extends CI_Controller {
                 $this->load->view('template_part/header', $data);
                 $this->load->view('account/transactions', $data);
                 $this->load->view('template_part/footer', $data);
-
-
         }
         public function email()
         {
