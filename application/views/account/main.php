@@ -57,24 +57,25 @@
     </div>
     <div class="col">
 			<h6>Upcoming Events</h6>
-	    <li id="ajax-groups">
-		    
-	    </li>
+
     </div>
 	  
-	    <script>
-$(document).ready(function(){
-    $.getJSON("https://account.nwam.tk/data/groups", function(result){
-      $.each(result, function(i, field){
-        var returnedData = JSON.parse(result);
-	 $("#ajax-groups").content(returnedData);
-      });
-    });
-  });
+	  <script>
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("ajax-groups").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://account.nwam.tk/data/groups", true);
+  xhttp.send();
 </script>
     <div class="col">
 			<h6>My Groups</h6>
-	  
+	  	    <p id="ajax-groups">
+		    
+	    </p>
     </div>
   </div>
 </div>
