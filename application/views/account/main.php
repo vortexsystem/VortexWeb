@@ -57,9 +57,23 @@
     </div>
     <div class="col">
 			<h6>Upcoming Events</h6>
+	    <li id="ajax-groups">
+		    
+	    </li>
     </div>
+	  
+	    <script>
+$(document).ready(function(){
+    $.getJSON("https://account.nwam.tk/data/groups", function(result){
+      $.each(result, function(i, field){
+        $("ajax-groups").append(field + " ");
+      });
+    });
+  });
+</script>
     <div class="col">
 			<h6>My Groups</h6>
+	  
     </div>
   </div>
 </div>
