@@ -64,18 +64,34 @@
 var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("ajax-groups").innerHTML =
-      this.responseText;
+        var dataObject = JSON.parse(this.responsetext);
+var listItemString = $('#listItem').html();
+
+dataObject.forEach(buildNewList);
+
+function buildNewList(item, index) {
+  var listItem = $('<li>' + listItemString + '</li>');
+  var listItemTitle = $('.title', listItem);
+  listItemTitle.html(item.FeeType);
+  var listItemAmount = $('.amount', listItem);
+  listItemAmount.html(item.FeeAmount);
+  var listItemDesc = $('.description', listItem);
+  listItemDesc.html(item.FeeDescription);
+  $('#ajax-groups').append(listItem);
+}
     }
   };
   xhttp.open("GET", "https://account.nwam.tk/data/groups", true);
   xhttp.send();
 </script>
+	
+	  
+	  
     <div class="col">
 			<h6>My Groups</h6>
-	  	    <p id="ajax-groups">
+	  	    <ul id="ajax-groups">
 		    
-	    </p>
+	    </ul>
     </div>
   </div>
 </div>
