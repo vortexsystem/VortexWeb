@@ -44,32 +44,47 @@
     </div>
   </div>
   <div class="row">
+	    <script>
+var getmyfriends = new XMLHttpRequest();
+  getmyfriends.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("ajax-friends").innerHTML =
+      this.responseText;
+    }
+  };
+  getmyfriends.open("GET", "https://account.nwam.tk/data/friends", true);
+  getmyfriends.send();
+</script>
     <div class="col">
 			<h6>My Friends</h6>
-		    <ul class="list-group">
-	    <?php foreach ($friends_array as $friends){ ?>
-
-  <li class="list-group-item"><?php echo $friends["name"];?></li>
-
-
-	    <?php } ?>
-		    </ul>
+		    <p id="ajax-friends"></p>
     </div>
+	  	    <script>
+var geteventsnow = new XMLHttpRequest();
+  geteventsnow.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("ajax-events").innerHTML =
+      this.responseText;
+    }
+  };
+  geteventsnow.open("GET", "https://account.nwam.tk/data/events", true);
+  geteventsnow.send();
+</script>
     <div class="col">
 			<h6>Upcoming Events</h6>
-
+	    <p id="ajax-events"></p>
     </div>
 	  
 	  <script>
-var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+var getgroupsnow = new XMLHttpRequest();
+  getgroupsnow.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("ajax-groups").innerHTML =
       this.responseText;
     }
   };
-  xhttp.open("GET", "https://account.nwam.tk/data/groups", true);
-  xhttp.send();
+  getgroupsnow.open("GET", "https://account.nwam.tk/data/groups", true);
+  getgroupsnow.send();
 </script>
     <div class="col">
 			<h6>My Groups</h6>
