@@ -66,7 +66,8 @@
 $(document).ready(function(){
     $.getJSON("https://account.nwam.tk/data/groups", function(result){
       $.each(result, function(i, field){
-        $("#ajax-groups").append(field + " ");
+        var returnedData = JSON.parse(result);
+	 $("#ajax-groups").content(returnedData);
       });
     });
   });
