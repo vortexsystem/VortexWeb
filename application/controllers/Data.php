@@ -10,8 +10,11 @@ class Data extends CI_Controller {
 		$current_user = $this->session->uuid;
 		$robust = $this->load->database('robust', TRUE);
     $sql = "SELECT os_groups_groups.GroupID, os_groups_groups.Name FROM os_groups_membership, os_groups_groups WHERE os_groups_membership.PrincipalID = ? AND os_groups_membership.GroupID = os_groups_groups.GroupID";
-    $robust->query($sql, array($current_user));
-	  echo $sql;
-    
+    $query = $robust->query($sql, array($current_user));
+	  
+$array = $query->result_array();
+$myJSON = json_encode($array);
+
+echo $myJSON;
  }
 }
