@@ -3,6 +3,7 @@
 ![Discord](https://img.shields.io/discord/541036640076955658.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/acd9b906a730dc0e7eb0/maintainability)](https://codeclimate.com/github/hollowomnicron/VortexWeb/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/acd9b906a730dc0e7eb0/test_coverage)](https://codeclimate.com/github/hollowomnicron/VortexWeb/test_coverage)
+
 Vortex is a Collection of Services and Systems that is used for the Web Services of Neverworld Grid.
 
 
