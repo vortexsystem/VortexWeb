@@ -92,11 +92,6 @@ var getgroupsnow = new XMLHttpRequest();
     <div class="col">
 			<h6>My Groups</h6>
 	  	    <table class="table table-sm">
-  <thead>
-    <tr>
-      <th scope="col">Your Groups</th>
-    </tr>
-  </thead>
   <tbody id="ajax-groups">
 
     
