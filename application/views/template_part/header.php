@@ -121,12 +121,19 @@
         </div>
 
       </li>
+							  
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="storeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Store</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="storeDropdown">
+          <a class="dropdown-item" href="store/">Store</a>
+          <a class="dropdown-item" href="store/subscriptions">Subscriptions</a>
+          <a class="dropdown-item" href="stor/buy">Buy</a>
+        </div>
 
-<li class="nav-item">
-        <a class="nav-link" href="events/">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Events</span></a>
-      </li>
+      </li>							  
     </ul>
 
     <div id="content-wrapper">
