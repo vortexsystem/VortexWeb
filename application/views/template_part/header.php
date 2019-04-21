@@ -130,7 +130,7 @@
         <div class="dropdown-menu" aria-labelledby="storeDropdown">
           <a class="dropdown-item" href="store/">Store</a>
           <a class="dropdown-item" href="store/subscriptions">Subscriptions</a>
-          <a class="dropdown-item" href="stor/buy">Buy</a>
+          <a class="dropdown-item" href="store/buy">Buy</a>
         </div>
 
       </li>							  
