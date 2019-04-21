@@ -38,5 +38,5 @@ class Store extends CI_Controller {
                 $this->load->view('store/subscriptions',$data);
 		$this->load->view('template_part/footer', $data);
 	}
-	}
+
 }
