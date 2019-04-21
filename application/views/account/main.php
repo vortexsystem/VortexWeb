@@ -74,10 +74,9 @@ var geteventsnow = new XMLHttpRequest();
 			<h6>Upcoming Events</h6>
 	    <p id="ajax-events"></p>
     </div>
-	  
 	  <script>
 function GroupsFunction(value) {
- $("#ajax-groups").append("<li>" + value.Name + "</li>");
+ $("#ajax-groups").append("<tr><td>" + value.Name + "</td></tr>");
 }
 var getgroupsnow = new XMLHttpRequest();
   getgroupsnow.onreadystatechange = function() {
@@ -92,9 +91,39 @@ var getgroupsnow = new XMLHttpRequest();
 </script>
     <div class="col">
 			<h6>My Groups</h6>
-	  	    <ul id="ajax-groups">
-		    
-	    </ul>
+	  	    <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Your Groups</th>
+    </tr>
+  </thead>
+  <tbody id="ajax-groups">
+
+    
+  </tbody>
+</table>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
