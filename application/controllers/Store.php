@@ -6,14 +6,37 @@ class Store extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		 $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Store'     
+);     
+		
+                $this->load->view('template_part/header', $data);
+                $this->load->view('store/index',$data);
+		$this->load->view('template_part/footer', $data);
 	}
   	public function buy()
 	{
-		$this->load->view('welcome_message');
+		 $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Buy'     
+);     
+		
+                $this->load->view('template_part/header', $data);
+                $this->load->view('store/buy',$data);
+		$this->load->view('template_part/footer', $data);
+	}
 	}
   	public function subscriptions()
 	{
-		$this->load->view('welcome_message');
+		 $data = array(
+        'base_href' => base_url(),
+        'page_title' => 'Subscriptions'     
+);     
+		
+                $this->load->view('template_part/header', $data);
+                $this->load->view('store/subscriptions',$data);
+		$this->load->view('template_part/footer', $data);
+	}
 	}
 }
