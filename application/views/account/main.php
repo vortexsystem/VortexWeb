@@ -79,8 +79,9 @@ var geteventsnow = new XMLHttpRequest();
 var getgroupsnow = new XMLHttpRequest();
   getgroupsnow.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("ajax-groups").innerHTML =
-      this.responseText;
+ 	var obj = JSON.parse(this.responseText);
+	document.getElementById("ajax-groups").innerHTML =
+      obj.Name + ", " + obj.GroupID;
     }
   };
   getgroupsnow.open("GET", "https://account.nwam.tk/data/groups", true);
