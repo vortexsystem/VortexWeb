@@ -26,7 +26,7 @@ class Store extends CI_Controller {
                 $this->load->view('store/buy',$data);
 		$this->load->view('template_part/footer', $data);
 	}
-	}
+	
   	public function subscriptions()
 	{
 		 $data = array(
