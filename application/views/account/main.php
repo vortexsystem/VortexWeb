@@ -77,7 +77,7 @@ var geteventsnow = new XMLHttpRequest();
 	  
 	  <script>
 function GroupsFunction(value) {
- $("ajax-groups").append("<li><a href='world.nwam.tk/group/". value.GroupID . "'>". value.Name . "</a></li>");
+ $("#ajax-groups").append("<li><a href='world.nwam.tk/group/". value.GroupID . "'>". value.Name . "</a></li>");
 }
 var getgroupsnow = new XMLHttpRequest();
   getgroupsnow.onreadystatechange = function() {
