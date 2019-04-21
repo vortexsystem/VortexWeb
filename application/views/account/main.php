@@ -81,7 +81,7 @@ var getgroupsnow = new XMLHttpRequest();
     if (this.readyState == 4 && this.status == 200) {
  	var obj = JSON.parse(this.responseText);
 	document.getElementById("ajax-groups").innerHTML =
-      obj.Name + ", " + obj.GroupID;
+      obj[0].Name;
     }
   };
   getgroupsnow.open("GET", "https://account.nwam.tk/data/groups", true);
