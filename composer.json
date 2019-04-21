@@ -7,7 +7,7 @@
 	"require": {
 		"php": ">=5.3.7",
 		"sentry/sdk":">=2.0.0",
-		"stripe/stripe-php":"latest"
+		"stripe/stripe-php"
 	},
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*",
