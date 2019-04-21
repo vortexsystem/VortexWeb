@@ -76,12 +76,15 @@ var geteventsnow = new XMLHttpRequest();
     </div>
 	  
 	  <script>
+function GroupsFunction(value) {
+ $("ajax-groups").append("<li><a href='world.nwam.tk/group/". value.GroupID . "'>". value.Name . "</a></li>");
+}
 var getgroupsnow = new XMLHttpRequest();
   getgroupsnow.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
  	var obj = JSON.parse(this.responseText);
-	document.getElementById("ajax-groups").innerHTML =
-      obj[0].Name;
+	obj.forEach(GroupsFunction);
+	    
     }
   };
   getgroupsnow.open("GET", "https://account.nwam.tk/data/groups", true);
@@ -89,9 +92,9 @@ var getgroupsnow = new XMLHttpRequest();
 </script>
     <div class="col">
 			<h6>My Groups</h6>
-	  	    <p id="ajax-groups">
+	  	    <ul id="ajax-groups">
 		    
-	    </p>
+	    </ul>
     </div>
   </div>
 </div>
