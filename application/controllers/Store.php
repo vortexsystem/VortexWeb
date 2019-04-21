@@ -31,7 +31,8 @@ class Store extends CI_Controller {
 	{
 		 $data = array(
         'base_href' => base_url(),
-        'page_title' => 'Subscriptions'     
+        'page_title' => 'Subscriptions',
+	'uuid'       => $this->session->uuid
 );     
 		
                 $this->load->view('template_part/header', $data);
