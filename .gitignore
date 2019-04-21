@@ -7,6 +7,7 @@ application/logs/*
 
 !application/*/.htaccess
 application/config/database.php
+application/config/keys.php
 composer.lock
 
 /vendor/
