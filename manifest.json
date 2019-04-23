@@ -1,0 +1,7 @@
+{
+  "name": "VortexApp",
+  "short_name": "Vortex",
+  "lang": "en-US",
+  "start_url": "/account/",
+  "display": "fullscreen"
+}
