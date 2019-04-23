@@ -6,6 +6,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
+	   <link rel="manifest" href="manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Vortex">
+<meta name="apple-mobile-web-app-title" content="Vortex">
+<meta name="msapplication-starturl" content="/account/">
       <base href="<?= $base_href ?>">
       <title>Neverworld MyAccount - Login</title>
       <!-- Custom fonts for this template-->
