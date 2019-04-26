@@ -24,15 +24,15 @@ class Data extends CI_Controller
     {
         $current_user = $this->session->uuid;
         $robust       = $this->load->database('robust', TRUE);
-        /*
-        $sql = "";
-        $query = $robust->query($sql, array($current_user));
+        $sql          = '  SELECT friends.PrincipalID, CONCAT(useraccounts.FirstName, " ", useraccounts.LastName) AS "Friend" FROM friends,useraccounts WHERE friends.Friend = ? AND useraccounts.PrincipalID = friends.PrincipalID UNION SELECT friends.Friend, CONCAT(useraccounts.FirstName, " ", useraccounts.LastName) AS "Friend"  FROM friends, useraccounts WHERE friends.PrincipalID = ? AND useraccounts.PrincipalID = friends.Friend';
+        $query        = $robust->query($sql, array(
+            $current_user, $current_user
+        ));
         
-        $array = $query->result_array();
+        $array  = $query->result_array();
         $myJSON = json_encode($array);
+        
         echo $myJSON;
-        */
-        echo json_encode("Error: Currently Unavailable");
     }
     public function events()
     {
