@@ -44,16 +44,20 @@
       </div>
    </div>
    <div class="row">
-      <script>
-         var getmyfriends = new XMLHttpRequest();
-           getmyfriends.onreadystatechange = function() {
+<script>
+         function FriendsFunction(value) {
+          $("#ajax-friends").append("<tr><td>" + value.Name + "</td></tr>");
+         }
+         var getfriendsnow = new XMLHttpRequest();
+           getfriendsnow.onreadystatechange = function() {
              if (this.readyState == 4 && this.status == 200) {
-               document.getElementById("ajax-friends").innerHTML =
-               this.responseText;
+          	var obj = JSON.parse(this.responseText);
+         	obj.forEach(FriendsFunction);
+         	    
              }
            };
-           getmyfriends.open("GET", "https://account.nwam.tk/data/friends", true);
-           getmyfriends.send();
+           getfriendsnow.open("GET", "https://account.nwam.tk/data/friends", true);
+           getfriendsnow.send();
       </script>
       <div class="col">
          <h6>My Friends</h6>
