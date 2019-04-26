@@ -83,15 +83,15 @@
       </div>
    </div>
 	   <div class="row">
-		         <script>
-         function EventsFunction(value) {
+  <script>
+         function EventFunction(value) {
           $("#ajax-events").append("<tr><td>" + value.Name + "</td></tr>");
          }
          var geteventsnow = new XMLHttpRequest();
            geteventsnow.onreadystatechange = function() {
              if (this.readyState == 4 && this.status == 200) {
           	var obj = JSON.parse(this.responseText);
-         	obj.forEach(EventsFunction);
+         	obj.forEach(EventFunction);
          	    
              }
            };
