@@ -61,7 +61,10 @@
       </script>
       <div class="col">
          <h6>My Friends</h6>
-         <p id="ajax-friends"></p>
+        <table class="table table-sm">
+            <tbody id="ajax-friends">
+            </tbody>
+         </table>
       </div>
       <script>
          function GroupsFunction(value) {
