@@ -83,8 +83,27 @@
       </div>
    </div>
 	   <div class="row">
+		         <script>
+         function EventsFunction(value) {
+          $("#ajax-events").append("<tr><td>" + value.Name + "</td></tr>");
+         }
+         var geteventsnow = new XMLHttpRequest();
+           geteventsnow.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+          	var obj = JSON.parse(this.responseText);
+         	obj.forEach(EventsFunction);
+         	    
+             }
+           };
+           geteventsnow.open("GET", "https://account.nwam.tk/data/events", true);
+           geteventsnow.send();
+      </script>
       <div class="col">
-	      <p>Events</p>
+	       <h6>Upcoming Events</h6>
+         <table class="table table-sm">
+            <tbody id="ajax-events">
+            </tbody>
+         </table>
       </div>
    </div>
    
