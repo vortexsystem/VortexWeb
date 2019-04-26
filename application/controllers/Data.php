@@ -32,10 +32,10 @@ class Data extends CI_Controller
         $myJSON = json_encode($array);
         echo $myJSON;
         */
-        echo "Error, Currently Unavailable";
+        echo json_encode("Error: Currently Unavailable");
     }
     public function events()
     {
-        echo "Error, Currently Unavailable";
+        echo json_encode("Error: Currently Unavailable");
     }
 }
