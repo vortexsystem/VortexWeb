@@ -1,5 +1,5 @@
 <?php foreach ($region_array as $region){ ?>
-<div style="display:none"><?php echo $region["regionFlags"];?></div>
+<div style="display:none"><?php echo $region["flags"];?></div>
 <center>
 	
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hmOXKUFV2pGtanKMa3q7e0Bw8e4Ngs4VDW1As6hXmV09ZTe3" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
