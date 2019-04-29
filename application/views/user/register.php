@@ -66,12 +66,13 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Register</a>
+          <input type="hidden" name="login" id="login" value="nnnn">
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="login.html">Login Page</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-        </div>
+               <a class="d-block small mt-3" href="user/login">Login</a>
+               <a class="d-block small" href="user/forgot">Forgot Password?</a>
+            </div>
       </div>
     </div>
   </div>
