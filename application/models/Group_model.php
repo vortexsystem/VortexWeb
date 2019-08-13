@@ -8,7 +8,7 @@ class Group_model extends CI_Model
       }
     public function get_user_groups($uuid)
       {
-			  $groups = $this->load->database('groups', TRUE);
+			  $groups = $this->load->database('robust', TRUE);
         $groups->select('*');
         $groups->from('os_groups_membership');
         $groups->where('PrincipalID', $uuid);
@@ -21,7 +21,7 @@ class Group_model extends CI_Model
       }
     public function get_groups($uuid)
       {
-			  $groups = $this->load->database('groups', TRUE);
+			  $groups = $this->load->database('robust', TRUE);
         $groups->select('*');
         $groups->from('os_groups_membership');
         $groups->where('PrincipalID', $uuid);

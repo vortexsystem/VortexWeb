@@ -9,7 +9,7 @@ class User_model extends CI_Model
     {
         $robust = $this->load->database('robust', true);
         $robust->select('PrincipalID');
-        $robust->from('useraccounts');
+        $robust->from('UserAccounts');
         $robust->where('FirstName', $first);
         $robust->where('LastName', $last);
         $robust->limit(1);
@@ -72,7 +72,7 @@ class User_model extends CI_Model
     public function getUserInfoByEmail($email)
     {
         $robust = $this->load->database('robust', true);
-        $q      = $robust->get_where('useraccounts', array(
+        $q      = $robust->get_where('UserAccounts', array(
             'email' => $email
         ), 1);
         if ($robust->affected_rows() > 0) {
@@ -99,7 +99,7 @@ class User_model extends CI_Model
   public function getUserInfo($id)
     {
 	    $robust = $this->load->database('robust', true);
-        $q = $robust->get_where('useraccounts', array('PrincipalID' => $id), 1);  
+        $q = $robust->get_where('UserAccounts', array('PrincipalID' => $id), 1);  
         if($robust->affected_rows() > 0){
             $row = $q->row();
             return $row;

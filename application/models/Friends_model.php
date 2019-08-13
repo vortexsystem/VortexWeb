@@ -9,9 +9,9 @@ class Friends_model extends CI_Model
       {
 	$robust = $this->load->database('robust', TRUE);
         $estates = $this->load->database('estates', TRUE);
-        $robust->select("friends.Friend, friends.Flags, concat(useraccounts.FirstName, ' ', useraccounts.LastName) AS 'name'");
-        $robust->from(array('friends','useraccounts'));
-        $robust->where('friends.PrincipalID', $uuid);
+        $robust->select("Friends.Friend, Friends.Flags, concat(UserAccounts.FirstName, ' ', UserAccounts.LastName) AS 'name'");
+        $robust->from(array('Friends','UserAccounts'));
+        $robust->where('Friends.PrincipalID', $uuid);
         $query = $robust->get();
         $row = $query->result_array();
         if (isset($row))
