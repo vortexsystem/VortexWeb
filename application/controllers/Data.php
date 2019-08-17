@@ -4,7 +4,18 @@ class Data extends CI_Controller
 {
     public function index()
     {
+        $current_user = $this->session->uuid;
+       
         
+        $array  = array("base_url"=> base_url(), 
+						"user_name"=> $this->session->name, 
+						"logged_in"=> $this->session->logged_in, 
+						"grid_info"=>$this->config->item('grid_info'),
+						"grid_url"=>$this->config->item('grid_url'),
+						);
+        $myJSON = json_encode($array);
+        
+        echo $myJSON;
     }
     public function groups()
     {
