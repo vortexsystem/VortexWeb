@@ -31,9 +31,10 @@ class Data extends CI_Controller
         ));
         $array        = $query->result_array();
         if (count($array) == 0) {
-            $myJSON = json_encode($array);
+			$myJSON = json_encode("Big OOF.. You have NO FRIENDS");
+          
         } else {
-            $myJSON = json_encode("Big OOF.. You have NO FRIENDS");
+              $myJSON = json_encode($array);
         }
         
         echo $myJSON;
