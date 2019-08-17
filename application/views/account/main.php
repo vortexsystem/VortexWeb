@@ -56,7 +56,7 @@
          	    
              }
            };
-           getfriendsnow.open("GET", "https://account.nwam.tk/data/friends", true);
+           getfriendsnow.open("GET", "/data/friends", true);
            getfriendsnow.send();
       </script>
       <div class="col">
@@ -78,7 +78,7 @@
          	    
              }
            };
-           getgroupsnow.open("GET", "https://account.nwam.tk/data/groups", true);
+           getgroupsnow.open("GET", "/data/groups", true);
            getgroupsnow.send();
       </script>
       <div class="col">
@@ -102,7 +102,7 @@
          	    
              }
            };
-           geteventsnow.open("GET", "https://account.nwam.tk/data/events", true);
+           geteventsnow.open("GET", "/data/events", true);
            geteventsnow.send();
       </script>
       <div class="col">

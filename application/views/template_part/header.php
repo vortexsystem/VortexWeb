@@ -20,8 +20,10 @@
 
   <!-- Page level plugin CSS-->
   <link href="resources/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
+<script>
+var baseUrl = "<?= $base_href ?>";
+</script>
+ <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
