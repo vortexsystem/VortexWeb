@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'https://demo.vortexapp.tk/';
-
+$config['grid_info'] = 'http://main.mobiusgrid.us/get_grid_info';
+$config['grid_url'] = 'main.mobiusgrid.us/';
 /*
 |--------------------------------------------------------------------------
 | Index File
