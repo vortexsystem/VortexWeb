@@ -24,12 +24,11 @@ class Data extends CI_Controller
     {
         $current_user = $this->session->uuid;
         $robust       = $this->load->database('robust', TRUE);
-        $sql          = '  SELECT friends.PrincipalID, CONCAT(useraccounts.FirstName, " ", useraccounts.LastName) AS "Name" FROM friends,useraccounts WHERE friends.Friend = ? AND useraccounts.PrincipalID = friends.PrincipalID UNION SELECT friends.Friend, CONCAT(useraccounts.FirstName, " ", useraccounts.LastName) AS "Name"  FROM friends, useraccounts WHERE friends.PrincipalID = ? AND useraccounts.PrincipalID = friends.Friend';
-        $query        = $robust->query($sql, array(
+        $sql          = 'SELECT Friends.PrincipalID, CONCAT(UserAccounts.FirstName, " ", UserAccounts.LastName) AS "Name" FROM Friends,UserAccounts WHERE Friends.Friend = ? AND UserAccounts.PrincipalID = Friends.PrincipalID UNION SELECT Friends.Friend, CONCAT(UserAccounts.FirstName, " ", UserAccounts.LastName) AS "Name" FROM Friends, UserAccounts WHERE Friends.PrincipalID = ? AND UserAccounts.PrincipalID = Friends.Friend;';
+		$query        = $robust->query($sql, array(
             $current_user, $current_user
         ));
-        
-        $array  = $query->result_array();
+                $array  = $query->result_array();
         $myJSON = json_encode($array);
         
         echo $myJSON;
