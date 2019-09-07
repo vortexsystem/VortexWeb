@@ -42,7 +42,7 @@ class User extends CI_Controller
         } else {
             $newdata = array(
                 'uuid' => $light,
-                'name' => $word("1") . '.' . $word("2"),
+                'name' => $user,
                 'logged_in' => TRUE
             );
             $this->session->set_userdata($newdata);
