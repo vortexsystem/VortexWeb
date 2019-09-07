@@ -1,8 +1,8 @@
 #  VortexWeb
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/495004e58090472a83e70d0302f1936e)](https://www.codacy.com/app/orbital-group/myaccount-new?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=neverworldgrid/myaccount&amp;utm_campaign=Badge_Grade)
 ![Discord](https://img.shields.io/discord/541036640076955658.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/13fe0b10251db9dd0a71/maintainability)](https://codeclimate.com/github/neverworldgrid/VortexWeb/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/13fe0b10251db9dd0a71/test_coverage)](https://codeclimate.com/github/neverworldgrid/VortexWeb/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fa7cf9385a9907db1e4f/maintainability)](https://codeclimate.com/github/vortexsystem/VortexWeb/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/fa7cf9385a9907db1e4f/test_coverage)](https://codeclimate.com/github/vortexsystem/VortexWeb/test_coverage)
 
 Vortex is a Collection of Services and Systems that is used for the Web Services of OpenSimulator
 
