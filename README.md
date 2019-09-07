@@ -8,7 +8,7 @@
 Vortex is a Collection of Services and Systems that is used for the Web Services of OpenSimulator
 
 
-VortexWeb is the Account Application for End Users
+VortexWeb is the Account Application for End Users.
 
 # Installation 
 * Install Files
