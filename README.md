@@ -1,5 +1,5 @@
 #  VortexWeb
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/495004e58090472a83e70d0302f1936e)](https://www.codacy.com/app/orbital-group/myaccount-new?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=neverworldgrid/myaccount&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/80b9476a61a94ac8be360c4e5a3ad9fa)](https://www.codacy.com/manual/hollowomnicron/VortexWeb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vortexsystem/VortexWeb&amp;utm_campaign=Badge_Grade)
 ![Discord](https://img.shields.io/discord/541036640076955658.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/fa7cf9385a9907db1e4f/maintainability)](https://codeclimate.com/github/vortexsystem/VortexWeb/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/fa7cf9385a9907db1e4f/test_coverage)](https://codeclimate.com/github/vortexsystem/VortexWeb/test_coverage)
