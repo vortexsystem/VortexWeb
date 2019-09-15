@@ -23,10 +23,10 @@ $newArr = json_decode($con, true);
 						"user_name"=> $this->session->name, 
 						"logged_in"=> $this->session->logged_in, 
 						"grid_info"=>$this->config->item('grid_info'),
-						"grid_url"=>$this->config->item('grid_url'),
-						"grid_information"=> $newArr
+						"grid_url"=>$this->config->item('grid_url')
 						);
-        $myJSON = json_encode($array);
+	    $finaltext = array_merge($array, $newArr);
+        $myJSON = json_encode($finaltext);
         
         echo $myJSON;
     }
