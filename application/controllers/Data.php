@@ -26,7 +26,7 @@ $newArr = json_decode($con, true);
 						"logged_in"=> $this->session->logged_in, 
 						"grid_info"=>$this->config->item('grid_info'),
 						"grid_url"=>$this->config->item('grid_url'),
-						"grid_information"=> $array1
+						"grid_information"=> json_encode($array1)
 						);
         $myJSON = json_encode($array);
         
