@@ -6,8 +6,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © 2019. Page rendered in <strong>{elapsed_time}</strong> seconds.   <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="configmodal" data-target="#configmodal">Open Config Modal</button>
+            <span>Copyright © 2019. Page rendered in <strong>{elapsed_time}</strong> seconds.<button type="button" class="" data-toggle="modal" data-target="#configmodal">Open Config Panel</button>
 <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></span>
           </div>
         </div>
@@ -25,24 +24,24 @@
   </a>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="configmodal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="configmodal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>This is a large modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="configmodal">Close</button>
-        </div>
+
+ 
+<!-- Modal -->
+<div class="modal" id="configmodal" tabindex="-1" role="dialog" aria-labelledby="configmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="configmodalLabel">Vortex Configuration</h4>
+      </div>
+      <div class="modal-body">
+        Configuration Info here
+      </div>
+      <div class="modal-footer">
       </div>
     </div>
   </div>
-
+</div>
 
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
