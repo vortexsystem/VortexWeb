@@ -21,6 +21,20 @@ var baseUrl = "<?= $base_href ?>";
  <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+var site;	
+var site.json = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': baseUrl+"data",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
+        }
+    });
+    return json;
+})(); 
 </head>
 
 <body id="page-top">
