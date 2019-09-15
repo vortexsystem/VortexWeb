@@ -22,8 +22,7 @@ var baseUrl = "<?= $base_href ?>";
   <link href="resources/css/sb-admin.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-var site;
-var site.config = (function () {
+var site = (function () {
     var json = null;
     $.ajax({
         'async': false,
