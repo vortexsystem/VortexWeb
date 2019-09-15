@@ -42,7 +42,7 @@ var site = (function () {
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" id="gridname" href="<?= $base_href ?>">Neverworld MyAccount</a>
+    <a class="navbar-brand mr-1" id="gridname" href="<?= $base_href ?>">MyAccount</a>
 <script>
 document.getElementById("gridname").innerHTML = site.gridname;
 </script>
