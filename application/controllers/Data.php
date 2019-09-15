@@ -13,9 +13,7 @@ $xmlfile = file_get_contents($path);
 $new = simplexml_load_string($xmlfile); 
   
 // Convert into json 
-$con = json_encode($new); 
-// Cast to an array
-$array1 = (array)$con;
+$con = json_encode($new);
 // Convert into associative array 
 $newArr = json_decode($con, true); 
         $current_user = $this->session->uuid;
@@ -26,7 +24,7 @@ $newArr = json_decode($con, true);
 						"logged_in"=> $this->session->logged_in, 
 						"grid_info"=>$this->config->item('grid_info'),
 						"grid_url"=>$this->config->item('grid_url'),
-						"grid_information"=> json_encode($array1)
+						"grid_information"=> $con
 						);
         $myJSON = json_encode($array);
         
