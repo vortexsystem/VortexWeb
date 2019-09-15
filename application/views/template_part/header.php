@@ -21,6 +21,7 @@ var baseUrl = "<?= $base_href ?>";
  <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
 var site;	
 var site.json = (function () {
     var json = null;
@@ -35,6 +36,7 @@ var site.json = (function () {
     });
     return json;
 })(); 
+	</script>
 </head>
 
 <body id="page-top">
