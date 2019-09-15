@@ -4,6 +4,20 @@ class Data extends CI_Controller
 {
     public function index()
     {
+$path = $this->config->item('grid_info'); 
+  
+// Read entire file into string 
+$xmlfile = file_get_contents($path); 
+  
+// Convert xml string into an object 
+$new = simplexml_load_string($xmlfile); 
+  
+// Convert into json 
+$con = json_encode($new); 
+// Cast to an array
+$array1 = (array)$con;
+// Convert into associative array 
+$newArr = json_decode($con, true); 
         $current_user = $this->session->uuid;
        
         
@@ -12,6 +26,7 @@ class Data extends CI_Controller
 						"logged_in"=> $this->session->logged_in, 
 						"grid_info"=>$this->config->item('grid_info'),
 						"grid_url"=>$this->config->item('grid_url'),
+						"grid_information"=> $array1
 						);
         $myJSON = json_encode($array);
         
