@@ -6,8 +6,8 @@
             <tbody>
                <tr>
                   <th scope="row">Username</th>
-                  <td>Apple Mole</td>
-               </tr>
+                  <td id="accountusername"></td>
+		    </tr>
                <tr>
                   <th scope="row">Payment info on File</th>
                   <td>No</td>
@@ -19,6 +19,9 @@
             </tbody>
          </table>
       </div>
+	   <script>
+		   document.getElementById("accountusername").innerHTML = site.user_name;
+	   </script>
       <div class="col">
          <h6>Billing Summary</h6>
          <table class="table">
