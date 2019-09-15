@@ -4,7 +4,7 @@ class Data extends CI_Controller
 {
     public function index()
     {
-        $path = $this->config->item('grid_url') + "/get_grid_info;
+        $path = $this->config->item('grid_url') + "/get_grid_info";
         
         // Read entire file into string 
         $xmlfile = file_get_contents($path);
