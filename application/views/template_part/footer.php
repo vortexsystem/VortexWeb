@@ -35,7 +35,73 @@
         <h4 class="modal-title" id="configmodalLabel">Vortex Configuration</h4>
       </div>
       <div class="modal-body">
-        Configuration Info here
+        <table class="pull-left col-md-8 ">
+                         <tbody>
+                             <tr>
+                                 <td class="h6"><strong>Código</strong></td>
+                                 <td> </td>
+                                 <td class="h5">02051</td>
+                             </tr>
+                             
+                             <tr>
+                                 <td class="h6"><strong>Descrição</strong></td>
+                                 <td> </td>
+                                 <td class="h5">descrição do produto</td>
+                             </tr>
+                             
+                             <tr>
+                                 <td class="h6"><strong>Marca/Fornecedor</strong></td>
+                                 <td> </td>
+                                 <td class="h5">Marca do produto</td>
+                             </tr>
+                             
+                             <tr>
+                                 <td class="h6"><strong>Número Original</strong></td>
+                                 <td> </td>
+                                 <td class="h5">0230316</td>
+                             </tr>
+                             
+                             <tr>
+                                 <td class="h6"><strong>Código N.C.M</strong></td>
+                                 <td> </td>
+                                 <td class="h5">032165</td>
+                             </tr>
+                             
+                             <tr>
+                                 <td class="h6"><strong>Código de Barras</strong></td>
+                                 <td> </td>
+                                 <td class="h5">0321649843</td>
+                             </tr>  
+
+                             <tr>
+                                 <td class="h6"><strong>Unid. por Embalagem</strong></td>
+                                 <td> </td>
+                                 <td class="h5">50</td>
+                             </tr>                            
+
+                             <tr>
+                                 <td class="h6"><strong>Quantidade Mínima</strong></td>
+                                 <td> </td>
+                                 <td class="h5">50</td>
+                             </tr>
+
+                             <tr>
+                                 <td class="h6"><strong>Preço Atacado</strong></td>
+                                 <td> </td>
+                                 <td class="h5">R$ 35,00</td>
+                             </tr> 
+                            
+                             <tr>
+                                 <td class="btn-mais-info text-primary">
+                                     <i class="open_info fa fa-plus-square-o"></i>
+                                     <i class="open_info hide fa fa-minus-square-o"></i> informações
+                                 </td>
+                                 <td> </td>
+                                 <td class="h5"></td>
+                             </tr> 
+
+                         </tbody>
+                    </table>
       </div>
       <div class="modal-footer">
       </div>
