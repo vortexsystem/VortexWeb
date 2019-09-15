@@ -42,8 +42,10 @@ var site = (function () {
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="<?= $base_href ?>">Neverworld MyAccount</a>
-
+    <a class="navbar-brand mr-1" id="gridname" href="<?= $base_href ?>">Neverworld MyAccount</a>
+<script>
+document.getElementById("gridname").innerHTML = site.gridname;
+</script>
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
     </button>
