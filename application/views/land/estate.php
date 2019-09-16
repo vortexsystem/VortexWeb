@@ -90,14 +90,7 @@
 
                     <ul class="list-group">
                         <li class="list-group-item text-muted">Inbox</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Here is your a link to the latest summary report from the..</a> 2.13.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Hi Joe, There has been a request on your account since that was..</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Nullam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Thllam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Wesm sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">For therepien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Also we, havesapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">Swedish chef is assaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                        <li class="list-group-item text-right"><a href="#" class="pull-left">Click here to view your invoice from</a> 2.13.2014</li>
 
                     </ul>
 
@@ -117,7 +110,7 @@
   <label class="col-md-4 control-label" for="estatesettings-name">Estate Name</label>  
   <div class="col-md-4">
   <input id="estatesettings-name" name="estatesettings-name" type="text" placeholder="Couldn't Get Estate Name" class="form-control input-md">
-  <span class="help-block">Your State</span>  
+  <span class="help-block">Your Estate's Name, Please Do Not Set to Anything Inappropiate</span>  
   </div>
 </div>
 
