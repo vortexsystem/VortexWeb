@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-sm-10">
-            <h1 id="estateinfo-name">Estate  Name</h1></div>
+            <h1>User name</h1></div>
         
     </div>
     <div class="row">
@@ -11,11 +11,17 @@
             <!--left col-->
 
             <ul class="list-group">
-                <li class="list-group-item text-muted">Overview</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Number of Regions</strong> 0</span></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Total Land Size</strong></span> 0<sub>m2</sub></li>
+                <li class="list-group-item text-muted">Profile</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> 2.13.2014</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> Yesterday</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> Joseph Doe</li>
 
             </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+                <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+            </div>
 
             <ul class="list-group">
                 <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
@@ -32,22 +38,24 @@
         <div class="col-sm-9">
 
             <ul class="nav nav-tabs" id="myTab">
-                <li class="active"><a href="#regions" data-toggle="tab">Regions</a></li>
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
                 <li><a href="#messages" data-toggle="tab">Messages</a></li>
                 <li><a href="#settings" data-toggle="tab">Settings</a></li>
             </ul>
 
             <div class="tab-content">
-                <div class="tab-pane active" id="regions>
+                <div class="tab-pane active" id="home">
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Region Name</th>
-                                    <th>Location</th>
-                                    <th>Teleport</th>
-                                    <th>Manage</th>
-
+                                    <th>#</th>
+                                    <th>Label 1</th>
+                                    <th>Label 2</th>
+                                    <th>Label 3</th>
+                                    <th>Label </th>
+                                    <th>Label </th>
+                                    <th>Label </th>
                                 </tr>
                             </thead>
                             <tbody id="items">
@@ -55,26 +63,12 @@
                                     <td>1</td>
                                     <td>Table cell</td>
                                     <td>Table cell</td>
-                             
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                             
-                                </tr>      
-											   <tr>
-                                    <td>1</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                             
-                                </tr>  
-											   <tr>
-                                    <td>1</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                             
-                                </tr>  
+                              
                             </tbody>
                         </table>
                         <hr>
