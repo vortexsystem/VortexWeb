@@ -40,14 +40,17 @@ class User extends CI_Controller
             );
             $this->load->view('user/login', $data);
         } else {
-			$account_data = $this->auth->getUserInfo($light);
-			echo($account_data->active);
-			die();
-            $newdata = array(
-                'uuid' => $light,
-                'name' => $user,
-                'logged_in' => TRUE
-            );
+            $account_data = $this->auth->getUserInfo($light);
+            if ($account_data->active = 1) {
+                $newdata = array(
+                    'uuid' => $light,
+                    'name' => $user,
+                    'logged_in' => TRUE
+                );
+            }
+		else {
+		die('Your account is suspended, please contact the Grid Owner');	
+		}
             $this->session->set_userdata($newdata);
             redirect('/');
         }
@@ -70,9 +73,9 @@ class User extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('user/register', $data);
         } else {
-        
+            
         }
     }
-
+    
 }
 ?>
