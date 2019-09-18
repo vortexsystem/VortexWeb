@@ -40,6 +40,8 @@ class User extends CI_Controller
             );
             $this->load->view('user/login', $data);
         } else {
+			$account_data = $this->auth->getUserInfo($light);
+			
             $newdata = array(
                 'uuid' => $light,
                 'name' => $user,
