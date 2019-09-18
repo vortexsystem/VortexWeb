@@ -8,4 +8,5 @@ exclude_paths:
   - 'system/**/*'
   - 'resources/**'
   - 'resources/**/*'
-  - 'application/language/**'
+  - 'application/language/**/*'
+  - 'application/language/*/**'
