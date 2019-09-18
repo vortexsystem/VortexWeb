@@ -41,7 +41,7 @@ class User extends CI_Controller
             $this->load->view('user/login', $data);
         } else {
 			$account_data = $this->auth->getUserInfo($light);
-			print($account_data);
+			echo($account_data->active);
 			die();
             $newdata = array(
                 'uuid' => $light,
