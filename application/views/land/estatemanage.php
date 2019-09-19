@@ -24,7 +24,7 @@
   <tr>
                     <td><?php echo $estates["EstateName"];?></td>
                     <td><?php echo $estates["EstateID"];?></td>
-                    <td>##</td>
+                    <td id="estate-<?php echo $estates["EstateID"];?>" onload="loadEstateRegions('<?php echo $estates["EstateID"];?>')"</td>
 	  <td><a href="land/estate/<?php echo $estates["EstateID"];?>">Click to Manage</a></td>
                   </tr>
         <?php } ?>
@@ -34,3 +34,17 @@
           </div>
           <div class="card-footer small text-muted"></div>
         </div>
+
+<script>
+function loadEstateRegions(estaterequested) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("estate"+estaterequested).innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://demo.vortexapp.tk/data/estate/count/" + estaterequested, true);
+  xhttp.send();
+}
+</script>
