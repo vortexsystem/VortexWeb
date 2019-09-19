@@ -11,14 +11,7 @@ Vortex is a Collection of Services and Systems that is used for the Web Services
 VortexWeb is the Account Application for End Users.
 
 # Installation 
-* Install Files
- * git clone https://github.com/vortexsystem/VortexWeb.git
- * cd VortexWeb
-* Install Composer Dependencies
- * composer install --no-dev   (if you are running a production installation)
- * composer install            (if you are running a developement installation)
-* Set Configuration 
-  * See Below
+See Docs
 	
 # Require Databases and Access
 VortexWeb Expects Access to a few databases of your OpenSimulator Servers, It is currently made for Grid Setups only, until we get all the features worked out. 
