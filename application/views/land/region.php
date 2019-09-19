@@ -87,7 +87,7 @@ var region = (function () {
     return json;
 })(); 
 
-document.getElementById("avatarsinregion").innerHTML = region;
+document.getElementById("avatarsinregion").innerHTML = region.toString();
 </script>
 
 
