@@ -68,14 +68,14 @@ class Data extends CI_Controller
     {
         if($method == "count"){
         $robust       = $this->load->database('estates', TRUE);
-        $sql          = 'SELECT COUNT(*) FROM estate_map WHERE EstateID = ?';
+        $sql          = 'SELECT COUNT(*) AS "number" FROM estate_map WHERE EstateID = ?';
         $query        = $robust->query($sql, array(
             $id
         ));
-        $array        = $query->row();
-        
-        $myJSON = json_encode($array);
-        
+       foreach ($query->result() as $row)
+{
+        echo $row->title;
+}
         
         echo $myJSON;
 		}else{
