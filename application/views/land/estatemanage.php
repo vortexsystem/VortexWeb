@@ -1,17 +1,18 @@
 <script>
-
-function loadEstateRegions(estaterequested) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("estate"+estaterequested).innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "https://demo.vortexapp.tk/data/estate/count/" + estaterequested, true);
-  xhttp.send();
-}
-</script>
+         function loadEstateRegions(estate) {
+          $("#estate"+estate).append(this.value);
+         }
+         var getfriendsnow = new XMLHttpRequest();
+           getfriendsnow.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+          	var obj = JSON.parse(this.responseText);
+         	obj.forEach(loadEstateRegions(estate));
+         	    
+             }
+           };
+           getfriendsnow.open("GET", "/data/estate/count/" + estate, true);
+           getfriendsnow.send();
+      </script>
 <!-- Page Content -->
         <h1>Manage Estates</h1>
         <hr>
