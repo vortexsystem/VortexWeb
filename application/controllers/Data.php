@@ -67,8 +67,7 @@ class Data extends CI_Controller
 	public function estate($method, $id)
     {
         if($method == "count"){
-		$ok =	json_encode("22");
-			echo $ok;
+		echo "22";
 		}
 		else{
 		$ok = json_encode("Bad Method");
