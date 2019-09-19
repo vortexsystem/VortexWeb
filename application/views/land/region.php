@@ -1,20 +1,6 @@
 
 <?php foreach ($region_array as $region){ ?>
-			    <script>
-var region = (function () {
-    var json = null;
-    $.ajax({
-        'async': false,
-        'global': false,
-        'url': "https://opensimworld.com/gateway/get.json?cmd=search&q="+ "<?php echo $region["regionName"];?>",
-        'dataType': "json",
-        'success': function (data) {
-            json = data;
-        }
-    });
-    return json;
-})(); 
-	</script>
+		
 <div style="display:none"><?php echo $region["flags"];?></div>
 <center>
 	
@@ -86,8 +72,22 @@ var regionHop = document.getElementById('region-hop');
 			   
                     </center>
 	      </div>
- <script>
-document.getElementById("avatarsinregion").innerHTML = region.total_avis;
+	    <script>
+var region = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "https://opensimworld.com/gateway/get.json?cmd=search&q="+ "<?php echo $region["regionName"];?>",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
+        }
+    });
+    return json;
+})(); 
+
+document.getElementById("avatarsinregion").innerHTML = region;
 </script>
 
 
