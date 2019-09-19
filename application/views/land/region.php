@@ -1,4 +1,20 @@
+
 <?php foreach ($region_array as $region){ ?>
+			    <script>
+var region = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "https://opensimworld.com/gateway/get.json?cmd=search&q="+ "<?php echo $region["regionName"];?>",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
+        }
+    });
+    return json;
+})(); 
+	</script>
 <div style="display:none"><?php echo $region["flags"];?></div>
 <center>
 	
@@ -54,9 +70,23 @@ var regionHop = document.getElementById('region-hop');
 </table>
     </div>
     <div class="col-sm">
-	    <h6>Region History</h6>
+	    <h6>OpenSimWorld</h6>
+	   		    <table class="table table-hover">
+  <tbody>
+    <tr>
+      <td id="avatarsinregion></td>
+    </tr>
+
+  </tbody>
+</table> 
+	    
+	    
     </div>
   </div>
+			    <script>
+document.getElementById("avatarsinregion").innerHTML = "Avis in Region: " + region.total_avis;
+</script>
+
                     </center>
 
 
