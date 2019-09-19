@@ -74,7 +74,7 @@ var regionHop = document.getElementById('region-hop');
 	   		    <table class="table table-hover">
   <tbody>
     <tr>
-      <td id="avatarsinregion></td>
+      <td id="avatarsinregion>Hello</td>
     </tr>
 
   </tbody>
@@ -83,11 +83,11 @@ var regionHop = document.getElementById('region-hop');
 	    
     </div>
   </div>
-			    <script>
+			   
+                    </center>
+ <script>
 document.getElementById("avatarsinregion").innerHTML = "Avis in Region: " + region.total_avis;
 </script>
-
-                    </center>
 
 
 
