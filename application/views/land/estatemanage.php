@@ -1,4 +1,5 @@
 <script>
+
 function loadEstateRegions(estaterequested) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -37,7 +38,7 @@ function loadEstateRegions(estaterequested) {
   <tr>
                     <td><?php echo $estates["EstateName"];?></td>
                     <td><?php echo $estates["EstateID"];?></td>
-                    <td id="estate-<?php echo $estates["EstateID"];?>" onload="loadEstateRegions('<?php echo $estates["EstateID"];?>')"</td>
+                    <td id="estate-<?php echo $estates["EstateID"];?>" onload="loadEstateRegions(<?php echo $estates["EstateID"];?>)"</td>
 	  <td><a href="land/estate/<?php echo $estates["EstateID"];?>">Click to Manage</a></td>
                   </tr>
         <?php } ?>
