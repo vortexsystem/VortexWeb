@@ -74,7 +74,7 @@ class Data extends CI_Controller
         ));
        foreach ($query->result() as $row)
 {
-        echo $row->title;
+        echo $row->number;
 }
         
         echo $myJSON;
