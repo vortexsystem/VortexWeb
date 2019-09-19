@@ -72,7 +72,7 @@ class Data extends CI_Controller
         $query        = $robust->query($sql, array(
             $id
         ));
-        $array        = $query->result();
+        $array        = $query->row();
         
         $myJSON = json_encode($array);
         
