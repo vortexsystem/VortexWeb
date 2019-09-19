@@ -5,7 +5,8 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hmOXKUFV2pGtanKMa3q7e0Bw8e4Ngs4VDW1As6hXmV09ZTe3" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
                     <h3 class="media-heading">Region: <?php echo $region["regionName"];?><small>  <a id="region-hop" href="hop://hg.neverworldgrid.com:8002/<?php echo $region["regionName"];?>">Teleport</a></small></h3>
        <script>
-document.getElementById("region-hop").innerHTML = site.grid_url + "<?php echo $region["regionName"];?>";
+var regionHop = document.getElementById('region-hop');
+ regionHop.setAttribute('href', site.grid_url + "<?php echo $region["regionName"];?>");
 </script>
 <span><strong>Flags </strong></span>
 <span class="badge badge-info">Flags not Available at this time</span>
