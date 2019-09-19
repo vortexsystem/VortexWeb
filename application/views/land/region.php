@@ -87,7 +87,7 @@ var region = (function () {
     return json;
 })(); 
 
-document.getElementById("avatarsinregion").innerHTML = region.toString();
+document.getElementById("avatarsinregion").innerHTML = region.total_avis;
 </script>
 
 
