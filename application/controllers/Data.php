@@ -68,8 +68,7 @@ class Data extends CI_Controller
     {
         if($method == "count"){
 		echo "22";
-		}
-		else{
+		}else{
 		$ok = json_encode("Bad Method");
 			echo $ok;
 		}
