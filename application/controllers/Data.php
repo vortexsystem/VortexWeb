@@ -67,7 +67,17 @@ class Data extends CI_Controller
 	public function estate($method, $id)
     {
         if($method == "count"){
-		echo "22";
+        $robust       = $this->load->database('estates', TRUE);
+        $sql          = 'SELECT COUNT(*) FROM estate_map WHERE EstateID = ?';
+        $query        = $robust->query($sql, array(
+            $id
+        ));
+        $array        = $query->result_array();
+        
+        $myJSON = json_encode($array);
+        
+        
+        echo $myJSON;
 		}else{
 		$ok = json_encode("Bad Method");
 			echo $ok;
