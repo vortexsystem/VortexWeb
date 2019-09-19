@@ -64,4 +64,15 @@ class Data extends CI_Controller
     {
         echo json_encode("Error: Currently Unavailable");
     }
+	public function estate($method, $id)
+    {
+        if($method == "count"){
+		$ok =	json_encode("22");
+			return $ok;
+		}
+		else{
+		$ok = json_encode("Bad Method");
+			return $ok;
+		}
+    }
 }
