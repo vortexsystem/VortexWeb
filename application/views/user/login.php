@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="Vortex">
 <meta name="msapplication-starturl" content="/account/">
       <base href="<?= $base_href ?>">
-      <title>Neverworld MyAccount - Login</title>
+      <title>Login to VortexWeb</title>
       <!-- Custom fonts for this template-->
       <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
       <!-- Custom styles for this template-->
@@ -60,7 +60,7 @@ echo "<div class='alert alert-danger' role='alert'>". $message . "</div>";
             </form>
             <div class="text-center">
                <a class="d-block small mt-3" href="user/register">Register an Account</a>
-               <a class="d-block small" href="user/forgot">Forgot Password?</a>
+
             </div>
          </div>
       </div>
