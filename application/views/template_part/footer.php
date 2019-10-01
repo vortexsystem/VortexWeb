@@ -6,7 +6,8 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © 2019. Page rendered in <strong>{elapsed_time}</strong> seconds.<button type="button" class="" data-toggle="modal" data-target="#configmodal">Open Config Panel</button>
+            <span>Copyright © 2019. Page rendered in <strong>{elapsed_time}</strong> seconds.
+					<!-- <button type="button" class="" data-toggle="modal" data-target="#configmodal">Open Config Panel</button> -->
 <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></span>
           </div>
         </div>
