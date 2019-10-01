@@ -5,7 +5,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/fa7cf9385a9907db1e4f/maintainability)](https://codeclimate.com/github/vortexsystem/VortexWeb/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/fa7cf9385a9907db1e4f/test_coverage)](https://codeclimate.com/github/vortexsystem/VortexWeb/test_coverage)
 
-Vortex is a Collection of Services and Systems that is used for the Web Services of OpenSimulator
+VortexWeb is a Web Interface for [OpenSimulator](https://opensimulator.org)
+
 
 
 VortexWeb is the Account Application for End Users.
