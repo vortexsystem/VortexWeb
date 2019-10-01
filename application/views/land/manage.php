@@ -11,9 +11,7 @@
                 <thead>
                   <tr>
                     <th>Region</th>
-                    <th>Position</th>
-                    <th>Product</th>
-                    <th>Estate</th>
+			  <th>Position</th>
                     <th>Manage</th>
                   </tr>
                 </thead>
@@ -29,8 +27,6 @@
   <tr>
                     <td><?php echo $regions["regionName"];?></td>
                     <td><?php echo $x; ?> , <?php echo $y;?></td>
-                    <td>General Region</td>
-                    <td>Estate Name Here</td>
 	  <td><a href="land/region/<?php echo $regions["uuid"];?>">Click to Manage</a></td>
                   </tr>
         <?php } ?>
