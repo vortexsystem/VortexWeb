@@ -11,8 +11,10 @@ VortexWeb is a Web Interface for [OpenSimulator](https://opensimulator.org)
 
 VortexWeb is the Account Application for End Users.
 
-# Installation 
-See Docs
+# Demo
+URL: https://demo.vortexapp.tk/user/login
+Username: Test User
+Password is "password" without quotes
 	
 # Require Databases and Access
 VortexWeb Expects Access to a few databases of your OpenSimulator Servers, It is currently made for Grid Setups only, until we get all the features worked out. 
