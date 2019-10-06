@@ -63,13 +63,13 @@ echo "<div class='alert alert-danger' role='alert'>". $message . "</div>";
 
                   <div class="form-group">
                      <div class="form-label-group">
-                        <input type="text" name="user" id="user" class="form-control" placeholder="Username">
+                        <input type="text" name="user" id="user" class="form-control" autocomplete="username" placeholder="Username">
                         <label for="user">User Name</label>
                      </div>
                   </div>
                   <div class="form-group">
                      <div class="form-label-group">
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" id="password" class="form-control" autocomplete="current-password" placeholder="Password">
                         <label for="password">Password</label>
                      </div>
                   </div>
