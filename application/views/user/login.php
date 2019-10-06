@@ -19,6 +19,25 @@
       <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
       <!-- Custom styles for this template-->
       <link href="resources/css/sb-admin.css" rel="stylesheet">
+<script>
+// Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("[PWA Builder] active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("pwabuilder-sw.js", {
+        scope: "./resources/"
+      })
+      .then(function (reg) {
+        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+      });
+  }
+}
+
+
+	   </script>
    </head>
    <body class="bg-dark">
       <div class="container">
