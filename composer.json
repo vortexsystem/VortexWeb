@@ -1,8 +1,8 @@
 {
-	"description": "Vortex",
-	"name": "neverworldgrid/vortex",
+	"description": "VortexWeb",
+	"name": "vortexsystem/VortexWeb",
 	"type": "project",
-	"homepage": "https://neverworldgrid.com",
+	"homepage": "https://vortexapp.tk",
 	"license": "MIT",
 	"require": {
 		"php": ">=5.3.7",
