@@ -1,5 +1,5 @@
 # Developers
-* Cody Cooper <nolan.perry.sc@gmail.com>
+* Nolan Perry <vortex@nolanperry.rocks>
 
 
 # Libraries and Thirdparty Services
