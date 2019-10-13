@@ -6,7 +6,7 @@ class Search extends CI_Controller {
 	{
 		 $data = array(
         'base_href' => base_url(),
-        'page_title' => 'Store'     
+        'page_title' => 'Search'     
 );     
 		
                 $this->load->view('template_part/header', $data);
