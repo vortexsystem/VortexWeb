@@ -17,12 +17,14 @@ $hook['post_controller_constructor'] = function()
     // load the instance
     $this->CI =& get_instance();
     
-    if ($this->CI->uri->segment(1) !== "user" or "offline" or "public") {
-        
-        
-        if (empty($_SESSION['logged_in'])) {
-            redirect('user/login');
-            
+    if ($this->CI->uri->segment(1) !== "user") {
+        if ($this->CI->uri->segment(1) !== "offline") {
+            if ($this->CI->uri->segment(1) !== "public") {
+                if (empty($_SESSION['logged_in'])) {
+                    redirect('user/login');
+                    
+                }
+            }
         }
     }
 };
