@@ -32,7 +32,7 @@ class Events extends CI_Controller {
 );     
 		
                 $this->load->view('template_part/header', $data);
-                $this->load->view('event/index',$data);
+                $this->load->view('event/home',$data);
 		$this->load->view('template_part/footer', $data);
         }
         public function edit($event_id)
