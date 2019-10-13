@@ -88,6 +88,12 @@ document.getElementById("gridname").innerHTML = site.gridname;
           <span>Dashboard</span>
         </a>
       </li>
+	<li class="nav-item">
+        <a class="nav-link" href="search/">
+          <i class="fas fa-fw fa-search"></i>
+          <span>Search</span>
+        </a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="landDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
